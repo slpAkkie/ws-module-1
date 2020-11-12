@@ -1,7 +1,7 @@
 {
-  "name": "frontendDevKit",
-  "version": "0.1.4",
-  "description": "My devKit for frontend apps",
+  "name": "ws-module-1",
+  "version": "0.0.1",
+  "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "cleanDev": "gulp cleanDev",
