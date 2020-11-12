@@ -1,7 +1,225 @@
-@import '../../../node_modules/normalize.css/normalize';
-@import '../../../node_modules/bootstrap/scss/bootstrap';
-
+@import '../utils/variables.scss';
+@import '../utils/fonts.scss';
 @import '../mixins/media.scss';
 
 @import './header';
 @import './footer';
+
+/**
+  =================
+  Базовая настройка
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $body-ff;
+  font-size: $body-fz;
+
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    position: relative;
+
+    &:after {
+      content: "";
+
+      width: 100%;
+      height: 1px;
+
+      background-color: white;
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: -5px;
+    }
+  }
+}
+
+h1, h2 ,h3, h4, h5, h6 {
+  color: $dark-blue;
+}
+h1 {
+  font-size: 3.5rem;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.5rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+/**
+  =========================
+  Настройка базовых классов
+*/
+
+// Классы отобрадения
+.d {
+  &-none {
+    display: none;
+    @include md-screen() {
+      &-md {
+      display: none !important;
+      }
+    }
+  }
+  &-flex {
+    display: flex;
+  }
+  &-block {
+    display: block;
+  }
+}
+
+// Классы контейнеров
+.page-container {
+  padding: 0 30px;
+  margin: 0 auto;
+
+  // Медиа запросы
+  @include xl-screen() {
+    & {
+      width: $lg-screen-size;
+    }
+  }
+  @include lg-screen() {
+    & {
+      width: $md-screen-size;
+    }
+  }
+  @include md-screen() {
+    & {
+      width: $sm-screen-size;
+    }
+  }
+  @include sm-screen() {
+    & {
+      width: $xs-screen-size;
+    }
+  }
+  @include xs-screen() {
+    & {
+      width: $xs-screen-size;
+    }
+  }
+}
+
+// Классы flex растяжения
+.justify-content {
+  &-between {
+    justify-content: space-between;
+  }
+  &-around {
+    justify-content: space-around;
+  }
+  &-center {
+    justify-content: center;
+
+    @include sm-screen() {
+      &-sm, &-sm * {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+// Сетка
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &-center {
+    align-items: center;
+  }
+}
+.col {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 15px;
+}
+
+// Классы внешнего вида
+.dark {
+  color: $common-white;
+}
+
+.bg {
+  &-blue {
+    background-color: $blue;
+  }
+}
+
+// Классы текста
+.text {
+  &-muted {
+    color: $gray;
+  }
+  &-blue {
+    color: $dark-blue;
+  }
+  &-center {
+    text-align: center;
+  }
+  &-bold {
+    font-weight: 700;
+  }
+}
+
+// Настройка списков
+.unmarked{
+  list-style-type: none;
+  padding: 0;
+}
+
+/**
+  ===========
+  Общие стили
+*/
+nav {
+  padding: 15px 0;
+
+  ul.nav-menu__list li.nav-menu__item {
+    margin: 0 15px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+img.logo {
+  width: 300px;
+}
+
+span.phone {
+  margin-left: 30px;
+
+  span.phone__phone-number {
+    margin-left: 10px;
+  }
+}
