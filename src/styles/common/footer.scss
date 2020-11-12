@@ -1,0 +1,47 @@
+/**
+  =================
+  Стили подвала сайта
+*/
+footer.site-footer {
+  background-color: $black-blue;
+
+  h3.company-name {
+    margin-left: 30px;
+  }
+
+  nav {
+    padding: 0 15px;
+  }
+
+  span.phone {
+    margin-top: 60px;
+  }
+
+  @include md-screen() {
+    span.phone {
+      margin: 30px 0;
+    }
+  }
+  @include sm-screen() {
+    h3.company-name {
+      margin: 30px 0 0 0;
+    }
+  }
+
+  ul.copyright-info {
+    padding: 0 15px;
+    margin: 10px 0;
+
+    font-size: 0.75rem;
+
+    & > li:not(.unmarked) {
+      margin-left: 30px;
+      padding-left: 10px;
+    }
+  }
+
+  main.page-container {
+    padding-top: 120px;
+    padding-bottom: 240px;
+  }
+}
