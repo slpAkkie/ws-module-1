@@ -1,0 +1,37 @@
+/**
+  =================
+  Стили шапки сайта
+*/
+header.site-header {
+  nav.nav-top {
+    background-color: $blue;
+  }
+
+  @include sm-screen() {
+    .nav-top__container {
+      justify-content: center;
+    }
+
+    span.phone {
+      display: none;
+    }
+  }
+
+  main.brand {
+    padding: 60px 0;
+
+    img.logo {
+      margin: 0 auto;
+    }
+
+    p.motto {
+      margin-top: -2rem;
+    }
+
+    span.angle-down {
+      margin-top: 75px;
+
+      cursor: pointer;
+    }
+  }
+}
