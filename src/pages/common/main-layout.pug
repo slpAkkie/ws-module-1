@@ -5,15 +5,15 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
     link(rel="stylesheet", href="css/style.min.css")
-    block styles
-    block headScripts
+    link(rel="stylesheet", href="css/all.min.css")
 
-    title New project
+    title СitiesNearby
   body
     include header.pug
 
-    block content
+    main.site-content#js-ajax-content
+      block content
 
     include footer.pug
+    script(src="./js/jquery-3.5.1.min.js")
     script(src="./js/main.js")
-    block postScripts
