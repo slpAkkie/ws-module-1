@@ -1,0 +1,21 @@
+// Шапка сайта
+header.site-header
+
+  // Навигационное меню
+  nav.nav-top.dark
+
+    // Разметка меню для десктопной версии
+    .nav-top__desktop
+      // Блок под навигицаю
+      .page-container.nav-top__container.row.d-flex.justify-content-between
+        include ../includes/common/nav-menu
+        include ../includes/common/phone
+
+  // Блок с логотипом и именем брэнда
+  main.brand
+    .container
+      img.logo.d-block(src="img/logo.png", alt="logo")
+      h1.company-name.text-center CitiesNearby
+      p.motto.text-center С нами города стали еще ближе
+      span.angle-down.d-block.text-center.text-blue
+        i.fas.fa-angle-down
