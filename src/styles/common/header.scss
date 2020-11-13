@@ -3,7 +3,9 @@
   Стили шапки сайта
 */
 header.site-header {
-  nav.nav-top {
+  border-bottom: 2px solid $blue;
+
+  nav {
     background-color: $blue;
   }
 
@@ -17,21 +19,20 @@ header.site-header {
     }
   }
 
-  main.brand {
-    padding: 60px 0;
+  main {
+    padding: 60px 0 30px 0;
 
-    img.logo {
-      margin: 0 auto;
-    }
-
-    p.motto {
+    p {
       margin-top: -2rem;
     }
 
-    span.angle-down {
+    .angle-down {
       margin-top: 75px;
 
-      cursor: pointer;
+      & i {
+        padding: 5px 15px;
+        cursor: pointer;
+      }
     }
   }
 }

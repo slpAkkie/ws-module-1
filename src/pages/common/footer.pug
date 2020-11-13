@@ -1,22 +1,23 @@
 // Подвал сайта
 footer.site-footer.dark
   // Основная часть
-  main.page-container.justify-content-center-sm
-    .row.justify-content-between
-      // Блок с лого, именем брэнда и копирайтом
-      .col.branding
-        .row
-          .brand
-            img.logo(src="img/logo.png", alt="logo")
-          h3.company-name.text-muted CitiesNearby
-        .row
-          p.copyright.text-muted.text-bold CitiesNearby &copy; 2020
-      .col
-        include ../includes/common/phone
+  main.justify-content-center-sm
+    .page-container
+      .row.justify-content-between
+        // Блок с лого, именем брэнда и копирайтом
+        .col.branding
+          .row
+            .brand
+              img.logo(src="img/logo.png", alt="logo")
+            h3.company-name.text-muted CitiesNearby
+          .row
+            p.copyright.text-muted.text-bold CitiesNearby &copy; 2020
+        .col
+          include ../includes/common/phone
 
-    // Блок под навигицаю
-    nav.nav-bot.row
-      include ../includes/common/nav-menu
+      // Блок под навигицаю
+      nav.nav-bot.row
+        include ../includes/common/nav-menu
 
   // Блок копирайтной информации
   .row.bg-blue.d-none-md

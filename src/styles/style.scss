@@ -1,1 +1,22 @@
 @import './common/global.scss';
+
+/** index */
+section.accumulation-principle main {
+  .principle-card {
+    h5 {
+      margin: 0;
+      margin-bottom: 15px;
+    }
+
+    article {
+      padding: 15px;
+
+      border: 1px solid $gray;
+      box-shadow: 0 0 10px 0 transparentize($color: $gray, $amount: .75)
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+  }
+}
