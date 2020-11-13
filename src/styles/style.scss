@@ -1,6 +1,8 @@
 @import './common/global.scss';
 
 /** index */
+
+  /** Карточка принципов накопления */
 section.accumulation-principle main {
   .principle-card {
     h5 {
@@ -17,6 +19,30 @@ section.accumulation-principle main {
 
     &:not(:last-child) {
       margin-bottom: 45px;
+    }
+  }
+}
+
+/** Карточка принципов накопления */
+section.trust {
+  .trust-card {
+    span.user-img {
+      font-size: 4rem;
+
+      i {
+        margin-top: 45px;
+      }
+    }
+
+    h6 {
+      margin: 1rem 0;
+    }
+
+    article {
+      padding: 15px;
+
+      border: 1px solid $gray;
+      box-shadow: 0 0 10px 0 transparentize($color: $gray, $amount: .75)
     }
   }
 }

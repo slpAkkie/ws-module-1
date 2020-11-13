@@ -1,9 +1,9 @@
 include chunks/principle-card.pug
+include ../common/lheader.pug
 
 section.accumulation-principle
   .page-container
-    h2.section-title.h-decoration
-      span Принцип накопления
+    +lheader("Принцип накопления")
     main.lh-offset
       +principle-card("Принцип номер один")
         p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore odit facere reprehenderit dolores quos recusandae sint velit voluptate minus libero!
