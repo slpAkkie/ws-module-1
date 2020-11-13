@@ -1,5 +1,6 @@
 $( () => {
 
+  // Плавное превращение навигационной панели при скролле
   $( window ).on( 'scroll', ( e ) => {
     if ( pageYOffset > 50 ) {
       $( 'header.site-header nav' ).removeClass( 'top' );

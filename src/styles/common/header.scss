@@ -47,16 +47,51 @@ header.site-header {
   main {
     padding: 60px 0 30px 0;
 
+    .page-container {
+      text-align: center;
+    }
+
     p {
       margin-top: -2rem;
     }
 
     .angle-down {
-      margin-top: 75px;
+      margin: 75px auto 0 auto;
 
       & i {
         padding: 5px 15px;
         cursor: pointer;
+      }
+    }
+
+    &.small {
+      padding: 0;
+      padding-bottom: 30px;
+
+      .page-container  {
+        .c-row {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        h1, p {
+          text-align: right;
+        }
+
+        .angle-down {
+          margin-top: 30px;
+        }
+      }
+
+      @include sm-screen() {
+        .c-row {
+          flex-direction: column;
+        }
+
+        h1, p {
+          text-align: center !important;
+        }
       }
     }
   }

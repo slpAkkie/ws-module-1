@@ -1,0 +1,28 @@
+// Результаты поиска
+section.search-results
+  .page-container
+    +header('Результаты поиска')(class='h-center')
+    +flight-card(1, 'A165DF', "Bombardier CRJ200", {
+      date1: '10.11.20',
+      time1: '14:40',
+      time2: '13:30',
+      time3: '1:10',
+      variety: 43,
+      price: 6000
+    })
+    +flight-card(2, 'BD632F', "Bombardier CRJ200", {
+      date1: '11.11.20',
+      time1: '09:00',
+      time2: '12:00',
+      time3: '3:00',
+      variety: 37,
+      price: 8000
+    })
+    +flight-card(3, 'IDK83F', "Bombardier CRJ200", {
+      date1: '12.11.20',
+      time1: '15:20',
+      time2: '18:10',
+      time3: '2:50',
+      variety: 68,
+      price: 3000
+    })

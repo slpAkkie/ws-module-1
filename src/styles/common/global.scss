@@ -303,6 +303,10 @@ button, input[type=button], input[type=submit] {
   &.no-wrap {
     flex-wrap: nowrap;
   }
+
+  &.vertical-center {
+    align-items: center;
+  }
 }
 .col {
   display: flex;
@@ -364,6 +368,17 @@ button, input[type=button], input[type=submit] {
 .unmarked{
   list-style-type: none;
   padding: 0;
+}
+
+// Стили разметки
+.m0 {
+  margin: 0 !important;
+}
+.p0 {
+  padding: 0 !important;
+}
+.w100 {
+  width: 100%;
 }
 
 /**

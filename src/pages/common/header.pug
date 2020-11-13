@@ -10,10 +10,14 @@ header.site-header
         include ../includes/common/phone
 
   // Блок с логотипом и именем брэнда
-  main
-    .page-container.text-center
-      img.logo(src="img/logo.png", alt="logo")
-      h1 CitiesNearby
-      p С нами города стали еще ближе
-      .angle-down.text-blue
-        i.fas.fa-angle-down
+  main(class=smallHeader ? 'small' : '')
+    .page-container
+      .c-row
+        .c-col
+          img.logo(src="img/logo.png", alt="logo")
+        .c-col
+          h1 CitiesNearby
+          p С нами города стали еще ближе
+      .c-row
+        .angle-down.text-blue
+          i.fas.fa-angle-down

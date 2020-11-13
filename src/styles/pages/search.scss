@@ -1,0 +1,104 @@
+/**
+  ================
+  Страница поиска рейсов
+*/
+
+// Карточка рейса
+section.search-results h2.section-title {
+  margin-bottom: 60px;
+}
+
+.flight-card {
+  border-radius: .25rem;
+  overflow: hidden;
+
+  @extend %shadowed;
+
+  @include sm-screen() {
+    input.m0[type="button"] {
+      margin-top: 15px !important;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  $img-width: 220px;
+  img {
+    width: $img-width;
+    height: 100%;
+  }
+
+  .flight-body {
+    width: calc(100% - #{$img-width});
+
+    padding: 30px;
+
+    & > .row {
+      &:first-child {
+        justify-content: space-between;
+
+        margin-bottom: 15px;
+
+        @include sm-screen() {
+          justify-content: center !important;
+
+          margin: 0;
+
+          .like-flight {
+            margin-top: 5px;
+          }
+        }
+
+        .like-flight {
+          padding: 0 5px;
+
+          font-size: 1.5rem;
+
+          transition: all .15s ease-in;
+
+          &:hover {
+            color: $common-black;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &:last-child {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  h5 span {
+    margin-left: 15px;
+
+    @include sm-screen() {
+      margin-left: 5px;
+    }
+
+    i.fas {
+      margin-left: 3px;
+    }
+  }
+
+  i.separater {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  table {
+    td:nth-child(even) {
+      padding-left: 5px;
+
+      &:not(:last-child) {
+        padding-right: 45px;
+
+        @include sm-screen() {
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}
