@@ -141,3 +141,66 @@ section.search {
     padding: 0 10px;
   }
 }
+
+// Блок подписки
+section.subscription {
+  background-color: transparentize($gray, .95);
+
+  main {
+    padding-top: 30px;
+  }
+
+  form {
+    .input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      max-width: 800px;
+
+      * {
+        font-size: 1.25rem;
+      }
+
+      input {
+        background-color: $common-white;
+
+        padding: 15px 30px;
+        border: 1px solid $blue;
+
+        color: $common-black;
+
+        &:first-child() {
+          width: 100%;
+
+          border-right: none;
+          border-radius: .25rem 0 0 .25rem;
+        }
+
+        &:last-child() {
+          text-align: right;
+          border-left: none;
+          border-radius: 0 .25rem .25rem 0;
+          width: 150px;
+        }
+      }
+
+      span.input-icon {
+        padding: 15px;
+        padding-bottom: 14px;
+
+        border: 1px solid $blue;
+        border-left: 1px solid transparentize($gray, .75);
+        border-right: 1px solid transparentize($gray, .75);
+
+        color: $gray;
+        background-color: transparentize($gray, .9);
+      }
+    }
+
+    input[type=button] {
+      margin-top: 30px;
+    }
+  }
+}

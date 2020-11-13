@@ -2,7 +2,7 @@ mixin trust-card(isReverse = false)
   .trust-card
     .row.no-wrap(class=isReverse ? 'row-reverse' : '')
       .col.d-flex.full-center
-        span.user-img
+        span.user-img.text-muted
           i.fas.fa-user
       .col
         h6(class=isReverse ? 'text-right' : '') Имя пользователя
