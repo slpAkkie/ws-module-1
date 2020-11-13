@@ -120,6 +120,7 @@ section.search {
 .stock-card {
   width: 250px;
   padding: 0 15px;
+  margin-bottom: 30px;
 
   .card-inner {
     @extend %shadowed;
@@ -138,9 +139,5 @@ section.search {
 
   article {
     padding: 0 10px;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 30px;
   }
 }
