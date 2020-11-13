@@ -1,0 +1,31 @@
+section.search
+  .page-container
+    +lheader('Поиск рейсов')(class='h-center')
+
+    main.dark
+      form.col.align-content-center(method='GET')
+        .row.form-fields
+          .col
+            label
+              | От куда
+              select#from(name="from")
+                option(value="Москва") Москва
+                option(value="Казань") Казань
+
+            label
+              | Куда
+              select#from(name="to")
+                option(value="Москва") Москва
+                option(value="Казань") Казань
+          .col
+            label
+              | Вылет
+              input#date-from(type="date", name="date-from")
+            label
+              | Прилет
+              input#date-to(type="date", name="date-to")
+            label
+              | Пассажиров
+              input#passengers(type="number", name="passengers" value="0" min="1" max="48")
+        .row
+          input(type="submit", value="Найти")

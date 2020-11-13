@@ -1,8 +1,11 @@
 @import './common/global.scss';
 
-/** index */
+/**
+  ================
+  Главная страница
+*/
 
-  /** Карточка принципов накопления */
+// Принципы накопления
 section.accumulation-principle main {
   .principle-card {
     h5 {
@@ -14,7 +17,7 @@ section.accumulation-principle main {
       padding: 15px;
 
       border: 1px solid $gray;
-      box-shadow: 0 0 10px 0 transparentize($color: $gray, $amount: .75)
+      @extend %shadowed;
     }
 
     &:not(:last-child) {
@@ -23,7 +26,7 @@ section.accumulation-principle main {
   }
 }
 
-/** Карточка принципов накопления */
+// Блок доверия
 section.trust {
   .trust-card {
 
@@ -47,7 +50,63 @@ section.trust {
       padding: 15px;
 
       border: 1px solid $gray;
-      box-shadow: 0 0 10px 0 transparentize($color: $gray, $amount: .75)
+      @extend %shadowed;
+    }
+  }
+}
+
+// Блок поисковой формы
+section.search {
+  background-color: $common-dark;
+  background-image: url(../img/peolpe-in-car.jpg);
+  background-size: cover;
+  background-position-y: -45px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  form {
+    margin: 0 auto;
+    padding: 75px 0;
+
+    font-size: 1.25rem;
+
+    .form-fields {
+      label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 320px;
+
+        margin: 5px 0;
+      }
+
+      @include sm-screen() {
+        .col, label {
+          width: 100%;
+        }
+      }
+
+      input, select {
+        background: transparent;
+        color: inherit;
+
+        border: none;
+        border-bottom: 2px solid $blue;
+      }
+
+      input[type=date]::-webkit-calendar-picker-indicator {
+        filter: invert(40%) sepia(60%) saturate(500%) hue-rotate(180deg);
+      }
+
+      input, select {
+        width: 170px;
+        height: 30px;
+      }
+
+      select option {
+        background-color: $common-dark;
+      }
     }
   }
 }
