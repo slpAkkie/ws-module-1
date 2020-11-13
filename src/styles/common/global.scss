@@ -233,6 +233,15 @@ h6 {
   &-blue {
     background-color: $blue;
   }
+  &-black-blue {
+    background-color: $black-blue;
+  }
+  &-black-blue-grad {
+    background: $black-blue-grad;
+  }
+  &-dark {
+    background-color: $common-dark;
+  }
 }
 
 // Классы текста
@@ -272,6 +281,8 @@ nav {
 
   ul.nav-menu__list li.nav-menu__item {
     margin: 0 15px;
+
+    font-weight: 500;
 
     &:first-child {
       margin-left: 0;
