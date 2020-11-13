@@ -26,6 +26,12 @@ main {
   &.lh-offset {
     margin-left: 30%;
     padding-left: 30px;
+
+    @include md-screen() {
+      & {
+        margin: 0;
+      }
+    }
   }
 
   &.site-content > section {
@@ -41,6 +47,8 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+
+  position: relative;
 
   &:after {
     content: "";
@@ -62,8 +70,6 @@ a {
   }
 
   &:hover {
-    position: relative;
-
     &:after {
       opacity: 1;
     }

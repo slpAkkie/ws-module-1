@@ -4,9 +4,34 @@
 */
 header.site-header {
   border-bottom: 2px solid $blue;
+  padding-top: 80px;
 
   nav {
-    background-color: $blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    transition: all .15s ease-in-out;
+
+    z-index: 10;
+  }
+
+  nav.top {
+    border-bottom: 1px solid $blue;
+    color: $common-dark;
+
+    & a:after {
+      background-color: $blue;
+    }
+  }
+
+  nav.scroll {
+    padding: 0;
+
+    background-color: transparentize($blue, 0.05);
+
+    border: none;
   }
 
   @include sm-screen() {
