@@ -41,22 +41,30 @@ a {
   text-decoration: none;
   cursor: pointer;
 
+  &:after {
+    content: "";
+
+    width: 100%;
+    height: 1px;
+
+    opacity: 0;
+
+    background-color: white;
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -5px;
+
+    transition: opacity .1s ease-out;
+  }
+
   &:hover {
     position: relative;
 
     &:after {
-      content: "";
-
-      width: 100%;
-      height: 1px;
-
-      background-color: white;
-
-      position: absolute;
-
-      left: 0;
-      right: 0;
-      bottom: -5px;
+      opacity: 1;
     }
   }
 }
