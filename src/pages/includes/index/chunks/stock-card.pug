@@ -1,0 +1,10 @@
+mixin stock-card(header, imgID)
+  .stock-card
+    .card-inner.col.no-gutters.d-flex.full-center
+      img(src="img/promotions/promotion-" + imgID + ".jpg", alt="promotion")
+      h6
+        a.accent-link
+          = header
+      article
+        block
+      input.small(type="button", value="Подробнее")

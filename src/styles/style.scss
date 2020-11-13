@@ -5,53 +5,49 @@
   Главная страница
 */
 
-// Принципы накопления
-section.accumulation-principle main {
-  .principle-card {
-    h5 {
-      margin: 0;
-      margin-bottom: 15px;
-    }
+// Карточка принципа накопления
+.principle-card {
+  h5 {
+    margin: 0;
+    margin-bottom: 15px;
+  }
 
-    article {
-      padding: 15px;
+  article {
+    padding: 15px;
 
-      border: 1px solid $gray;
-      @extend %shadowed;
-    }
+    border: 1px solid $gray;
+    @extend %shadowed;
+  }
 
-    &:not(:last-child) {
-      margin-bottom: 45px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 45px;
   }
 }
 
-// Блок доверия
-section.trust {
-  .trust-card {
+// Карточка доверия
+.trust-card {
 
-    &:not(:last-child) {
-      margin-bottom: 30px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  span.user-img {
+    font-size: 4rem;
+
+    i {
+      margin-top: 45px;
     }
+  }
 
-    span.user-img {
-      font-size: 4rem;
+  h6 {
+    margin: 1rem 0;
+  }
 
-      i {
-        margin-top: 45px;
-      }
-    }
+  article {
+    padding: 15px;
 
-    h6 {
-      margin: 1rem 0;
-    }
-
-    article {
-      padding: 15px;
-
-      border: 1px solid $gray;
-      @extend %shadowed;
-    }
+    border: 1px solid $gray;
+    @extend %shadowed;
   }
 }
 
@@ -95,7 +91,6 @@ section.search {
 
         border: none;
         border-bottom: 2px solid $blue;
-        border-radius: .25rem .25rem 0 0;
 
         padding: 5px 10px;
 
@@ -118,5 +113,34 @@ section.search {
         background-color: $common-dark;
       }
     }
+  }
+}
+
+// Карточка акции
+.stock-card {
+  width: 250px;
+  padding: 0 15px;
+
+  .card-inner {
+    @extend %shadowed;
+  }
+
+  img {
+    width: 100%;
+    height: 150px;
+
+    border-radius: .25rem .25rem 0 0;
+  }
+
+  h6 {
+    margin: 15px 0;
+  }
+
+  article {
+    padding: 0 10px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
   }
 }

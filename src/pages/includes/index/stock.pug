@@ -2,6 +2,11 @@
 section.stock
   .page-container
     +lheader('Акции')
-    main
-      .row
-        // +stock-card()
+    main.lh-offset
+      .row.full-center
+        +stock-card('Первая акция', 1)
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ducimus at velit atque esse quidem nulla mollitia magnam facilis maxime!
+        +stock-card('Вторая акция', 2)
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ducimus at velit atque esse quidem nulla mollitia magnam facilis maxime!
+        +stock-card('Третья акция', 3)
+          | Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ducimus at velit atque esse quidem nulla mollitia magnam facilis maxime!

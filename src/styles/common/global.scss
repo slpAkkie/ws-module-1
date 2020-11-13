@@ -50,7 +50,7 @@ a {
 
     opacity: 0;
 
-    background-color: white;
+    background-color: $common-white;
 
     position: absolute;
 
@@ -67,6 +67,10 @@ a {
     &:after {
       opacity: 1;
     }
+  }
+
+  &.accent-link:after {
+    background-color: $blue;
   }
 }
 
@@ -165,6 +169,14 @@ button, input[type=button], input[type=submit] {
     top: -1px;
     @extend %shadowed;
   }
+
+  &.small {
+    width: fit-content;
+
+    padding: 5px 25px;
+
+    font-size: 1rem;
+  }
 }
 
 /**
@@ -188,16 +200,15 @@ button, input[type=button], input[type=submit] {
   }
   &-flex {
     display: flex;
-
-    &.full-center {
-      justify-content: center;
-      align-items: center;
-      align-content: center;
-    }
   }
   &-block {
     display: block;
   }
+}
+.full-center {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 // Классы контейнеров
@@ -295,6 +306,9 @@ button, input[type=button], input[type=submit] {
 
   &-reverse {
     flex-direction: column-reverse;
+  }
+  &.no-gutters {
+    padding: 0;
   }
 }
 
