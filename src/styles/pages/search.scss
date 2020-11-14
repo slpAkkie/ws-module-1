@@ -9,7 +9,7 @@ section.search-results h2.section-title {
 }
 
 .flight-card {
-  border-radius: .25rem;
+  border-radius: .25em;
   overflow: hidden;
 
   @extend %shadowed;
@@ -54,7 +54,7 @@ section.search-results h2.section-title {
         .like-flight {
           padding: 0 5px;
 
-          font-size: 1.5rem;
+          font-size: 1.625em;
 
           transition: all .15s ease-in;
 

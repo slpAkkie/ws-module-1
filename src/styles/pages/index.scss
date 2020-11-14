@@ -30,7 +30,7 @@
   }
 
   span.user-img {
-    font-size: 4rem;
+    font-size: 4.125em;
 
     i {
       margin-top: 45px;
@@ -62,7 +62,7 @@ section.search {
     margin: 0 auto;
     padding: 75px 0;
 
-    font-size: 1.25rem;
+    font-size: 1.375em;
 
     .form-fields {
       margin-bottom: 30px;
@@ -133,6 +133,8 @@ section.search {
 
   h6 {
     margin: 15px 0;
+    padding: 0 15px;
+
     text-align: center;
   }
 
@@ -159,7 +161,7 @@ section.subscription {
       max-width: 800px;
 
       * {
-        font-size: 1.25rem;
+        font-size: 1.375em;
       }
 
       input {
@@ -174,7 +176,7 @@ section.subscription {
           width: 100%;
 
           border-right: none;
-          border-radius: .25rem 0 0 .25rem;
+          border-radius: .25rem 0 0 .25em;
         }
 
         &:last-child() {
@@ -192,6 +194,8 @@ section.subscription {
         border: 1px solid $blue;
         border-left: 1px solid transparentize($gray, .75);
         border-right: 1px solid transparentize($gray, .75);
+
+        font-size: 1.15em;
 
         color: $gray;
         background-color: transparentize($gray, .9);
