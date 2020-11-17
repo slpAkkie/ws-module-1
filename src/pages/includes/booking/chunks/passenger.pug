@@ -1,0 +1,23 @@
+mixin passenger(fio)
+  .passenger.hidden
+    .heading.d-flex.justify-content-between
+      span.fio #{fio}
+      .arrow-icon
+        i.fas.fa-angle-down
+    .info
+      .row.justify-content-between
+        label.name
+          | Имя:
+          input#name(type="text", name="name")
+        label.reg-date
+          | Дата регистрации:
+          input#reg-date(type="date", name="reg-date")
+      .row.justify-content-between
+        label.name
+          | Фамилия:
+          input#surname(type="text", name="surname")
+        label.doc-num
+          | Имя:
+          input#doc-num(type="text", name="doc-num")
+      .row.justify-content-end
+        button.small Удалить
