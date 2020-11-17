@@ -1,3 +1,10 @@
 extends common/main-layout.pug
 
+block vars
+  - var smallHeader = true
+
 block content
+  include includes/booking/there.pug
+  include includes/booking/back.pug
+  include includes/booking/passengers.pug
+  include includes/booking/final-price.pug
