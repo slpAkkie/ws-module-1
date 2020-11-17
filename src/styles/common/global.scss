@@ -33,8 +33,12 @@ main {
     margin-left: 30%;
     padding-left: 30px;
 
+    &-small {
+      margin-left: 20%;
+    }
+
     @include md-screen() {
-      & {
+      &, &-small {
         margin: 0;
       }
     }
@@ -43,7 +47,16 @@ main {
   &.site-content > section {
     padding: 120px 0;
 
-    &:not(:last-child) {
+    &.one {
+      &:not(:last-child) {
+        padding-bottom: 30px;
+      }
+      &:not(:first-child) {
+        padding-top: 30px;
+      }
+    }
+
+    &:not(.no-border):not(:last-child) {
       border-bottom: 2px solid $blue;
     }
   }
@@ -136,21 +149,45 @@ h1, h2 ,h3, h4, h5, h6 {
 }
 h1 {
   font-size: 3.625em;
+
+  @include xs-screen() {
+    font-size: 3.325em;
+  }
 }
 h2 {
   font-size: 3.125em;
+
+  @include xs-screen() {
+    font-size: 2.825em;
+  }
 }
 h3 {
   font-size: 2.625em;
+
+  @include xs-screen() {
+    font-size: 2.325em;
+  }
 }
 h4 {
   font-size: 2.125em;
+
+  @include xs-screen() {
+    font-size: 1.825em;
+  }
 }
 h5 {
   font-size: 1.625em;
+
+  @include xs-screen() {
+    font-size: 1.325em;
+  }
 }
 h6 {
   font-size: 1.125em;
+
+  @include xs-screen() {
+    font-size: 1em;
+  }
 }
 
 button, input[type=button], input[type=submit] {
@@ -263,6 +300,10 @@ button, input[type=button], input[type=submit] {
       }
     }
   }
+
+  &-end {
+    justify-content: flex-end;
+  }
 }
 .align-content {
   &-between {
@@ -358,6 +399,9 @@ button, input[type=button], input[type=submit] {
   &-right {
     text-align: right;
   }
+  &-bold {
+    font-weight: bold;
+  }
 }
 
 // Настройка списков
@@ -374,7 +418,7 @@ button, input[type=button], input[type=submit] {
   padding: 0 !important;
 }
 .w100 {
-  width: 100%;
+  width: 100% !important;
 }
 
 /**
