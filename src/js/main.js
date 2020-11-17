@@ -12,4 +12,9 @@ $( () => {
     }
   } )
 
+  // Сокрытие по нажатия кнопки пассажира
+  $( '.passenger > .heading .arrow-icon' ).on( 'click', function () {
+    $( $( this ).parent() ).parent().toggleClass( 'hidden' );
+  } )
+
 } )
