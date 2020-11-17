@@ -1,0 +1,15 @@
+// Информация о пассажирах
+section.passengers.no-border.one
+  .page-container
+    +header('Пассажиры')
+    main.lh-offset-small
+      .heading.d-flex.justify-content-between
+        .passengers-count.text-bold
+          | Кол-во:
+          span.data 3
+        .add-new-passenger
+          a.accent-link Добавить пассажира
+      .passengers-list
+        +passenger('Вороненко Витайлий Михайлович')
+        +passenger('Вороненко Алексей Михайлович')
+        +passenger('Вороненко Анна Петровна')
