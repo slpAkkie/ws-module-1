@@ -1,4 +1,9 @@
 section.there, section.back {
+  .flight-card {
+    background-color: transparentize($common-white, .1);
+    color: $common-black;
+  }
+
   @include sm-screen() {
     .flight-card .flight-body.w100 > .row:first-child {
       justify-content: space-between !important;
@@ -39,6 +44,9 @@ section.passengers {
   .passenger {
     border: 1px solid transparentize($gray, .75);
     border-radius: .75rem;
+
+    background-color: transparentize($common-white, .1);
+    color: $common-black;
 
     @extend %shadowed;
 
