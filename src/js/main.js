@@ -17,4 +17,14 @@ $( () => {
     $( $( this ).parent() ).toggleClass( 'hidden' );
   } )
 
+  // Отправка формы
+  $( 'section.search form' ).on( 'submit', () => {
+    location.href = 'search.html';
+  } )
+
+  // Добавление в бронирование
+  $( '.flight-card input[type=button]' ).on( 'click', () => {
+    location.href = 'booking.html';
+  } )
+
 } )

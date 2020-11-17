@@ -4,7 +4,7 @@ section.search
     +header('Поиск рейсов')(class='h-center')
 
     main.dark
-      form.col.align-content-center(method='GET')
+      form.col.align-content-center(action='search.html', method='GET')
         .row.form-fields
           .col
             label
@@ -27,6 +27,6 @@ section.search
               input#date-to(type="date", name="date-to")
             label
               | Пассажиров
-              input#passengers(type="number", name="passengers" value="0" min="1" max="48")
+              input#passengers(type="number", name="passengers" value="1" min="1" max="48")
         .row
           input(type="submit", value="Найти")
