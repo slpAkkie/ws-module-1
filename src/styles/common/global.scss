@@ -241,6 +241,7 @@ button, input[type=button], input[type=submit] {
 .d {
   &-none {
     display: none;
+
     @include md-screen() {
       &-md {
       display: none !important;
@@ -299,6 +300,12 @@ button, input[type=button], input[type=submit] {
         justify-content: center;
       }
     }
+
+    @include lg-screen() {
+      &-lg, &-lg * {
+        justify-content: center;
+      }
+    }
   }
 
   &-end {
@@ -320,6 +327,12 @@ button, input[type=button], input[type=submit] {
         align-items: center;
       }
     }
+  }
+}
+
+.align-items {
+  &-center {
+    align-items: center;
   }
 }
 
@@ -357,6 +370,13 @@ button, input[type=button], input[type=submit] {
   &.no-gutters {
     padding: 0;
   }
+
+  &-lg {
+    @include lg-screen() {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 // Классы внешнего вида
@@ -389,6 +409,12 @@ button, input[type=button], input[type=submit] {
   }
   &-center {
     text-align: center;
+
+    @include sm-screen() {
+      &-sm {
+        text-align: center;
+      }
+    }
   }
   &-bold {
     font-weight: 700;

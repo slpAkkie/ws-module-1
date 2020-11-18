@@ -4,7 +4,7 @@ mixin passenger(fio)
       span.fio #{fio}
       .arrow-icon
         i.fas.fa-angle-down
-    .info
+    .info(class = passengers_with_seat ? 'with-seats' : '')
       .row.justify-content-between
         label.name
           | Имя:
@@ -19,5 +19,14 @@ mixin passenger(fio)
         label.doc-num
           | Имя:
           input#doc-num(type="text", name="doc-num")
-      .row.justify-content-end
-        button.small Удалить
+      .row(class=!passengers_with_seat ? 'justify-content-end' : 'justify-content-between align-items-center')
+        - if (!passengers_with_seat)
+          button.small Удалить
+        - else
+          label.seat-there
+            | Место туда:
+            input#surname(type="text", name="seat-there" disabled)
+          label.seat-back
+            | Место обратно:
+            input#doc-num(type="text", name="seat-back" disabled)
+          button.small Занять места

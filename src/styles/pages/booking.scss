@@ -100,7 +100,24 @@ section.passengers {
         height: 344px;
 
         .row {
-          justify-content: center;
+          flex-direction: column;
+          align-content: center;
+        }
+      }
+
+      &.with-seats {
+        height: 248px;
+
+        button {
+          height: 42px;
+        }
+
+        @include lg-screen() {
+          height: 288px;
+        }
+
+        @include sm-screen() {
+          height: 488px;
         }
       }
     }
