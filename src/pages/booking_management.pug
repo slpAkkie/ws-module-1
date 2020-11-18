@@ -1,3 +1,11 @@
 extends common/main-layout.pug
 
+block vars
+  - passengers_with_seat = true
+  - booking_dark = false
+
 block content
+  include includes/booking_management/header.pug
+  include includes/booking/there.pug
+  include includes/booking/back.pug
+  include includes/booking/passengers.pug

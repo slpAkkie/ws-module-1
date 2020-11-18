@@ -27,4 +27,14 @@ $( () => {
     location.href = 'booking.html';
   } )
 
+  // Бронирование
+  $( 'section.final-price button' ).on( 'click', () => {
+    location.href = 'booking_management.html';
+  } )
+
+  // Управление бронированием
+  $( '.info.with-seats button' ).on( 'click', () => {
+    location.href = 'seat.html';
+  } )
+
 } )
