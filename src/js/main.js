@@ -37,4 +37,14 @@ $( () => {
     location.href = 'seat.html';
   } )
 
+  // Выбор места
+  $( '.seats .seat' ).on( 'click', function () {
+    let choosedSeats = $( '.seats .seat.choosed' );
+    choosedSeats.each( seat => {
+      $( choosedSeats[ seat ] ).removeClass( 'choosed' );
+    } );
+
+    $( this ).toggleClass( 'choosed' );
+  } );
+
 } )
