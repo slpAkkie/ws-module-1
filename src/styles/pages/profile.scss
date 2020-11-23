@@ -1,0 +1,54 @@
+section.profile {
+  .heading {
+    margin-bottom: 30px;
+  }
+
+  h2.section-title {
+    flex-grow: 1;
+  }
+
+  button#exit {
+    font-size: 1.15em;
+  }
+
+  .profile-data {
+    font-size: 1.15em;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  h6 {
+    margin: 10px 0;
+  }
+}
+
+section.bookings {
+  .booking-card {
+    padding: 30px;
+
+    border-radius: .25em;
+
+    @extend %shadowed;
+
+    h6 {
+      margin: 0 0 30px 0;
+    }
+
+    table {
+      tr {
+        margin: 5px 0;
+      }
+      td:nth-child(even) {
+        padding-left: 5px;
+
+        &:not(:last-child) {
+          padding-right: 45px;
+
+          @include sm-screen() {
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
