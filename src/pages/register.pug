@@ -1,3 +1,26 @@
-extends common/main-layout.pug
+extends common/login-layout.pug
+
+block vars
+  - let pageTitle = 'Регистрация'
 
 block content
+  form.row.justify-content-between.align-items-center(action="api/register", method="POST")
+    label(for="name") Имя
+    input#name(type="text", name="name" placeholder="Ваше имя" required)
+
+    label(for="surname") Фамилия
+    input#surname(type="text", name="surname" placeholder="Ваше фамилия" required)
+
+    label(for="document_number") Номер документа
+    input#document_number(type="text", name="document_number" placeholder="Ваш номер документа" required)
+
+    label(for="phone") Телефон
+    input#phone(type="tel", name="phone" placeholder="Ваш номер телефона" required)
+
+    label(for="password") Пароль
+    input#password(type="password", name="password" placeholder="Придумайте пароль" required)
+
+    label(for="s-password") Повторите пароль
+    input#s-password(type="password", name="s-password" placeholder="Повторите пароль" required)
+
+    button.w100(type="submit") Зарегистрироваться
