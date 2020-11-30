@@ -1,9 +1,5 @@
-# Первый модуль WS
-
-## Версия
-
-`0.0.1`
+# Первый модуль WSR2020
 
 ## Автор
 
-@slpAkkie
+Alexandr Shamanin (@slpAkkie)
