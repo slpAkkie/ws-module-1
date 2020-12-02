@@ -18,8 +18,8 @@
             <!-- Меню навигации-->
             <ul class="nav-menu__list d-flex justify-content-between unmarked">
               <li class="nav-menu__item"><a class="nav-menu__link test-0-nav-1" href="/#stock">Акции</a></li>
-              <li class="nav-menu__item"><a class="nav-menu__link test-0-nav-2" href="search.html">Поиск</a></li>
-              <li class="nav-menu__item"><a class="nav-menu__link test-0-nav-3" href="#flight-registration">Регистрация на рейс</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link test-0-nav-2" href="/#search-form">Поиск</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link test-0-nav-3" href="/#flight-registration">Регистрация на рейс</a></li>
               <li class="nav-menu__item"><a class="nav-menu__link test-0-nav-4" href="profile.html">Личный кабинет</a></li>
             </ul>
             <!-- Номер телефона--><span class="phone row row-center"><i class="fas fa-phone"></i><span class="phone__phone-number test-0-phone"><a href="tel:8 (800) 100-10-10">8 (800) 100-10-10</a></span></span>
@@ -48,10 +48,10 @@
         <div class="page-container">
           <h2 class="section-title h-decoration h-center"><span>Поиск рейсов</span></h2>
           <main class="dark">
-            <form class="col align-items-center" action="search.html" method="GET">
+            <form class="col align-items-center" id="search-form" action="search.html" method="GET">
               <div class="row form-fields">
                 <div class="col">
-                  <label>От куда
+                  <label>Откуда
                     <select id="from" name="from">
                       <option value="Москва">Москва</option>
                       <option value="Казань">Казань</option>
@@ -65,14 +65,14 @@
                   </label>
                 </div>
                 <div class="col">
-                  <label>Вылет
+                  <label>Дата вылета
                     <input id="date-from" type="date" name="date-from">
                   </label>
-                  <label>Прилет
+                  <label>Дата вылета обратно
                     <input id="date-to" type="date" name="date-to">
                   </label>
                   <label>Пассажиров
-                    <input id="passengers" type="number" name="passengers" value="1" min="1" max="48">
+                    <input id="passengers" type="number" name="passengers" value="1" min="1" max="8">
                   </label>
                 </div>
               </div>
@@ -217,8 +217,8 @@
             <!-- Меню навигации-->
             <ul class="nav-menu__list d-flex justify-content-between unmarked">
               <li class="nav-menu__item"><a class="nav-menu__link test-0-nav-1" href="/#stock">Акции</a></li>
-              <li class="nav-menu__item"><a class="nav-menu__link test-0-nav-2" href="search.html">Поиск</a></li>
-              <li class="nav-menu__item"><a class="nav-menu__link test-0-nav-3" href="#flight-registration">Регистрация на рейс</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link test-0-nav-2" href="/#search-form">Поиск</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link test-0-nav-3" href="/#flight-registration">Регистрация на рейс</a></li>
               <li class="nav-menu__item"><a class="nav-menu__link test-0-nav-4" href="profile.html">Личный кабинет</a></li>
             </ul>
           </nav>

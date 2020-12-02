@@ -4,11 +4,11 @@ section.search
     +header('Поиск рейсов')(class='h-center')
 
     main.dark
-      form.col.align-items-center(action='search.html', method='GET')
+      form#search-form.col.align-items-center(action='search.html', method='GET')
         .row.form-fields
           .col
             label
-              | От куда
+              | Откуда
               select#from(name="from")
                 option(value="Москва") Москва
                 option(value="Казань") Казань
@@ -20,13 +20,13 @@ section.search
                 option(value="Казань") Казань
           .col
             label
-              | Вылет
+              | Дата вылета
               input#date-from(type="date", name="date-from")
             label
-              | Прилет
+              | Дата вылета обратно
               input#date-to(type="date", name="date-to")
             label
               | Пассажиров
-              input#passengers(type="number", name="passengers" value="1" min="1" max="48")
+              input#passengers(type="number", name="passengers" value="1" min="1" max="8")
         .row
           input(type="submit", value="Найти")
