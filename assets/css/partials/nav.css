@@ -55,6 +55,8 @@ nav#header__nav {
 
 .nav__item {
   margin-right: 25px;
+
+  font-weight: 500;
 }
 
 .nav__phone {
