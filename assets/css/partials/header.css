@@ -21,7 +21,7 @@ header {
 .header__main {
   padding-top: var(--nav-height);
 
-  border-bottom: 2px solid var(--accent-color);
+  border-bottom: var(--section-border);
 }
 
 .header-main__inner {
@@ -44,7 +44,7 @@ header {
   text-align: right;
 }
 
-.header__face h2 {
+.header__face h1 {
   margin: .25em 0;
 }
 
