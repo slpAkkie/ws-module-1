@@ -1,0 +1,30 @@
+/*
+  Сброс стандартных стилей браузера
+  ====================
+*/
+
+
+
+/*
+  Сбросим отступы
+*/
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+  Изменим модель расчета ширины и высоты
+*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/*
+  Уберем назойливую обводку элементов
+*/
+*:hover, *:before:hover, *:after:hover,
+*:focus, *:before:focus, *:after:focus {
+  outline: none;
+  box-shadow: none;
+}
