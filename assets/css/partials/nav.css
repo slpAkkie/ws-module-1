@@ -3,7 +3,7 @@
   ====================
 */
 
-nav#header__nav {
+nav.header__nav {
   width: 100%;
   height: var(--nav-height);
 
@@ -64,9 +64,11 @@ nav#header__nav {
 }
 
 @media screen and (max-width: 767px) {
+
   .nav__phone {
     display: none;
   }
+
 }
 
 
@@ -146,9 +148,9 @@ nav#header__nav {
   Описание Медиа запросов для навигационного меню
   =========================
 */
-@media screen and (max-width: 583px) {
+@media screen and (max-width: 588px) {
 
-  nav#header__nav {
+  nav.header__nav {
     height: auto;
   }
 
