@@ -6,6 +6,7 @@
 
 $( document ).ready( function () {
 
+  /** По нажатию на кнопку-бургер переключить видимость меню */
   $( '#js-burger' ).click( toggleNavMenu );
 
 } );
@@ -13,9 +14,19 @@ $( document ).ready( function () {
 
 
 /**
+ *
+ * =========================
  * Опсание функций-обработчиков
+ * =========================
+ *
  */
 
+
+
+/**
+ * Переключение видимости навигационного меню
+ * =========================
+ */
 function toggleNavMenu() {
   $( this ).toggleClass( 'active' );
   $( '.nav__menu' ).toggleClass( 'show' );
