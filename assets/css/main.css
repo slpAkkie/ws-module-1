@@ -3,6 +3,7 @@
   ====================
 */
 
+@import './fonts.css';
 @import './normalize.css';
 @import './grid.css';
 @import './partials/header.css';
@@ -51,6 +52,8 @@
   --light-neutral-1: var(--gray-op-1);
   --light-neutral-2: var(--gray-op-2);
 
+  --link-decor-color: var(--text-color);
+
   /*
     Описание шрифтов
     ====================
@@ -65,6 +68,8 @@
   */
 
   --site-min-width: 300px;
+
+  --link-decor-height: 1px;
 }
 
 
@@ -88,6 +93,40 @@ body {
 
 body.scroll-fix {
   overflow: hidden;
+}
+
+
+
+/*
+  Стили тэгов
+*/
+a {
+  position: relative;
+}
+
+a::after {
+  content: '';
+
+  height: var(--link-decor-height);
+
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: -3px;
+
+  background-color: var(--text-color);
+
+  opacity: 0;
+
+  transition: opacity .2s ease;
+}
+
+a.decor-light::after {
+  background-color: var(--light-color);
+}
+
+a:hover::after {
+  opacity: 1;
 }
 
 
