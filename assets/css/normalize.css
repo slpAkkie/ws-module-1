@@ -28,3 +28,26 @@ html, body {
   outline: none;
   box-shadow: none;
 }
+
+/*
+  Сбросим стили ссылок
+*/
+a {
+  color: inherit;
+
+  text-decoration: none;
+}
+
+/*
+  Сбросим стили списков
+*/
+ul {
+  margin: 0;
+}
+
+ul, ul li {
+  list-style-type: none;
+
+  margin-left: 0;
+  padding-left: 0;
+}
