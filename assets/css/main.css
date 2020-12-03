@@ -3,8 +3,69 @@
   ====================
 */
 
-@import 'normalize.css';
-@import 'grid.css';
+@import './normalize.css';
+@import './grid.css';
+@import './partials/header.css';
+@import './partials/footer.css';
+
+
+
+:root {
+
+  /*
+    Цвета
+    ====================
+  */
+  --white: #ffffff;
+  --black: #000000;
+  --dark-blue: #112141;
+  --light-blue: #1898fd;
+  --blue: #195c91;
+  --bright-blue: #397eff;
+  --gray-blue: #517cce;
+  --little-light-black: #333333;
+
+  --gray: #8a9cbd;
+  --gray-op-1: rgba(140, 155, 190, .1);
+  --gray-op-2: rgba(140, 155, 190, .05);
+
+
+  /*
+    Описание цветовой схемы
+    ====================
+  */
+
+  --light-color: var(--white);
+  --dark-color: var(--black);
+
+  --grad-blue-dark: var(--dark-blue);
+  --grad-blue-light: var(--light-blue);
+  --grad-blue: var(--blue);
+
+  --accent-color: var(--bright-blue);
+
+  --header-color: var(--gray-blue);
+  --text-color: var(--little-light-black);
+
+  --neutral: var(--gray);
+  --light-neutral-1: var(--gray-op-1);
+  --light-neutral-2: var(--gray-op-2);
+
+  /*
+    Описание шрифтов
+    ====================
+  */
+
+  --main-font-family: 'Montserrat';
+  --main-font-size: 16px;
+
+  /*
+    Описание размеров
+    ====================
+  */
+
+  --site-min-width: 300px;
+}
 
 
 
@@ -12,6 +73,22 @@
   Описание общих стилей
   ====================
 */
+
+
+
+/*
+  Стили для body
+*/
+body {
+  font-family: var(--main-font-family);
+  font-size: var(--main-font-size);
+
+  min-width: var(--site-min-width);
+}
+
+body.scroll-fix {
+  overflow: hidden;
+}
 
 
 
