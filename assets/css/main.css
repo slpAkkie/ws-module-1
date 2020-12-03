@@ -39,6 +39,8 @@
   --light-color: var(--white);
   --dark-color: var(--black);
 
+  --main-dark: var(--blue);
+
   --grad-blue-dark: var(--dark-blue);
   --grad-blue-light: var(--light-blue);
   --grad-blue: var(--blue);
@@ -100,6 +102,33 @@ body.scroll-fix {
 /*
   Стили тэгов
 */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+
+  color: var(--main-dark);
+}
+
+h1 {
+  font-size: 3em;
+}
+h2 {
+  font-size: 2.8em;
+}
+h3 {
+  font-size: 2.5em;
+}
+h4 {
+  font-size: 2em;
+}
+h5 {
+  font-size: 1.5em;
+}
+h6 {
+  font-size: 1.25em;
+}
+
+
+
 a {
   position: relative;
 }
@@ -127,6 +156,12 @@ a.decor-light::after {
 
 a:hover::after {
   opacity: 1;
+}
+
+
+
+.img-wrapper > img {
+  width: 100%;
 }
 
 
