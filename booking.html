@@ -13,7 +13,6 @@
 
 <head>
 
-
   <!-- Мета теги
   ========================= -->
   <meta charset="UTF-8">
@@ -21,10 +20,10 @@
 
 
 
-  <!-- Стили
+  <!-- CSS
   ========================= -->
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/booking.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/pages/booking.css">
 
 
 
@@ -32,20 +31,16 @@
   ========================= -->
   <title>Бронирование</title>
 
-
-
-</head> <!-- Конец Head -->
+</head> <!-- !head -->
 
 
 
-<!-- Body -->
+<!-- body -->
 
 <body>
 
-
-
   <!-- App контейнер для VueJS
-   ========================= -->
+  ========================= -->
   <div id="app">
 
 
@@ -55,21 +50,46 @@
       - Навигация              ->    Отсутствует
       - Основная часть         ->    Отсутствует
     ========================= -->
-    <header>
+    <header id="header">
 
       <!--  Меню навигации
 
         Ссылки:
-        - Акции                  ->    Отсутствует
-        - Поиск                  ->    Отсутствует
-        - Регистрация на рейс    ->    Отсутствует
-        - Личный кабинет         ->    Отсутствует
+        - Акции                  ->    OK
+        - Поиск                  ->    OK
+        - Регистрация на рейс    ->    Вопрос: "Куда должна вести ссылка?"
+        - Личный кабинет         ->    OK
       ========================= -->
       <nav id="header__nav">
         <div class="container">
+          <div class="nav__inner">
 
+            <!-- Кнопка-бургер
+            ========================= -->
+            <div class="nav__burger" id="js-burger">
+              <span class="burger__line burger__line_middle"></span>
+            </div> <!-- !nav__burger -->
+
+            <!-- Меню навигации
+            ========================= -->
+            <div class="nav__menu">
+
+              <ul class="nav__section nav__items">
+                <li class="nav__item"><a href="/#promotions">Акции</a></li>
+                <li class="nav__item"><a href="/#search">Поиск</a></li>
+                <li class="nav__item"><a href="#">Регистрация на рейс</a></li>
+                <li class="nav__item"><a href="/profile.html">Личный кабинет</a></li>
+              </ul> <!-- !nav__items -->
+
+              <div class="nav__section nav__phone">
+                <a href="tel:8-800-100-10-10">8 (800) 100-10-10</a>
+              </div> <!-- !nav__phone -->
+
+            </div> <!-- !nav__menu -->
+
+          </div>
         </div>
-      </nav> <!--  Конец "Меню навигации" -->
+      </nav> <!-- !header__nav -->
 
 
 
@@ -83,19 +103,24 @@
         <div class="container">
 
         </div>
-      </div> <!--  Конец "Логотип, название, слоган" -->
+      </div> <!-- !header__main -->
 
-    </header> <!--  Конец "Шапка сайта" -->
+    </header> <!-- !header -->
 
 
 
     <!-- Основной контент сайта
-     ========================= -->
+
+      - Описание принципов накопления ->    Отсутствует
+      - Доверие компании              ->    Отсутствует
+      - Акции                         ->    Отсутствует
+      - Подписка на закрытые акции    ->    Отсутствует
+    ========================= -->
     <main id="router-view">
 
-      <!-- Контент -->
+      <!-- Контент страницы -->
 
-    </main> <!--  Конец "Основной контент сайта" -->
+    </main> <!-- !router-view -->
 
 
 
@@ -104,20 +129,23 @@
       - Телефон                ->    Отсутствует
       - Навигация по сайту     ->    Отсутствует
     ========================= -->
-    <footer>
+    <footer id="footer">
       <div class="container">
 
       </div>
-    </footer> <!--  Конец "Подвал" -->
+    </footer> <!-- !footer -->
 
-  </div> <!--  Конец "App контейнер для VueJS" -->
+  </div> <!-- !app -->
 
 
 
-  <!-- Скрипты
-  ========================= -->
+  <!-- JS -->
 
-  <script src="assets/js/main.js"></script>
-</body> <!-- Конец Body -->
+  <script src="./assets/js/jquery-3.5.1.js"></script>
+  <script src="./assets/js/main.js"></script>
+
+  <!-- !JS -->
+
+</body> <!-- !body -->
 
 </html>
