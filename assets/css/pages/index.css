@@ -65,3 +65,113 @@
   }
 
 }
+
+
+
+/*
+  Секция: Доверие
+  ====================
+*/
+.trust-card {
+  padding: 20px;
+
+  border-radius: 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.trust-card:not(:last-child) {
+  margin-bottom: 45px;
+}
+
+.trust-card__inner {
+  display: flex;
+
+  align-items: center;
+}
+
+.trust-card__avatar {
+  flex-shrink: 0;
+
+  width: var(--trust-card-rect-size);
+  height: var(--trust-card-rect-size);
+
+  margin-right: 30px;
+
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.trust-card__avatar img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.trust-card__content {
+  display: flex;
+
+  flex-direction: column;
+}
+
+h4 {
+  margin-top: 0;
+  margin-bottom: .5rem;
+
+  position: relative;
+}
+
+.trust-card__name h4::after {
+  content: '';
+
+  width: 33%;
+  height: 1px;
+
+  background-color: var(--neutral);
+
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+
+.trust-card__text p {
+  margin: .75rem 0;
+}
+
+.trust-card__text p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+
+  .trust-card__inner {
+    position: relative;
+  }
+
+  .trust-card__avatar {
+    width: 47px;
+    height: 47px;
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .trust-card__name {
+    padding-left: calc( 47px + 15px );
+  }
+
+}
+
+@media screen and (max-width: 529px) {
+
+  .trust-card__avatar {
+    display: none;
+  }
+
+  .trust-card__name {
+    padding-left: 0;
+  }
+
+}
