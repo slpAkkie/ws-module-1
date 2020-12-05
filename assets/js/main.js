@@ -41,15 +41,16 @@ $( document ).ready( function () {
  * =========================
  */
 function scrollfect() {
-  $( '.scrollfect--block' ).each( function () {
+  $( '.scrollfect' ).each( function () {
     let headerHeight = $( 'nav.header__nav' ).height();
 
     if (
       ( window.scrollY + headerHeight <= this.offsetTop + this.clientHeight )
       &&
       ( window.scrollY + window.innerHeight >= this.offsetTop )
+      || $( this ).hasClass( 'scrollfect--on-load' )
     ) $( this ).attr( 'scrollfect-visible', 'true' );
-    else $( this ).attr( 'scrollfect-visible', 'false' );
+    else if ( !$( this ).hasClass( 'scrollfect--once' ) ) $( this ).attr( 'scrollfect-visible', 'false' );
   } );
 }
 
