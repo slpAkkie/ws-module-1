@@ -157,11 +157,11 @@ h6 {
 
 
 
-a {
+a.decor {
   position: relative;
 }
 
-a::after {
+a.decor::after {
   content: '';
 
   height: var(--link-decor-height);
@@ -182,7 +182,7 @@ a.decor-light::after {
   background-color: var(--light-color);
 }
 
-a:hover::after {
+a.decor:hover::after {
   opacity: 1;
 }
 
