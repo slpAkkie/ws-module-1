@@ -1,4 +1,193 @@
-/*
-  Стили для страницы бронирования
-  ====================
+/* 
+    Бронирование
 */
+.booking-card {
+    box-shadow: var(--shadow);
+
+    border-radius: .5em;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+}
+
+.booking__heading {
+    display: flex;
+
+    align-items: center;
+}
+
+.booking__heading h4 {
+    margin: 0;
+}
+
+.booking__heading {
+    padding-bottom: 15px;
+}
+
+.booking__data, .booking__odata {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.booking_data-el {
+    margin: 5px 0;
+    width: 48%;
+}
+
+.booking_data-el:nth-child(2n) {
+    margin-left: 4%;
+}
+
+.booking_data-el {
+    display: flex;
+    justify-content: space-between;
+}
+
+.booking_data-el.cost,
+.booking_data-el.availability {
+    display: block;
+    
+    font-size: 1.5em;
+    color: var(--dark-color);
+
+    margin-top: 15px;
+}
+
+.booking_data-el.cost span,
+.booking_data-el.availability span {
+    margin-left: 15px;
+}
+
+.booking_data-el.cost i,
+.booking_data-el.availability i {
+    margin-left: 5px;
+}
+
+.booking__odata {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+
+@media screen and (max-width: 624px) {
+
+    .booking__data {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .booking_data-el {
+        width: 100%;
+    }
+
+    .booking_data-el:nth-child(2n) {
+        margin-left: 0;
+    }
+
+    .booking_data-el.cost,
+    .booking_data-el.availability {
+        text-align: center;
+    }
+
+    .booking__heading {
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width: 470px) {
+
+    .booking__options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .booking__options .button {
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 342px) {
+
+    .booking__heading i,
+    .booking__heading span {
+        display: none;
+    }
+
+}
+
+
+.flights input[type=button] {
+    padding: 5px 10px;
+
+    font-size: 1em;
+}
+
+
+
+#js-new-passenger {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 25px;
+}
+
+
+.passenger-card {
+    box-shadow: var(--shadow);
+    border-radius: .25em;
+    
+    padding: 30px 10px;
+    width: 90%;
+    margin: 15px auto;
+}
+
+.passenger-card__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.passenger-card label {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.passenger-card input {
+    border: 1px solid var(--accent-color);
+
+    width: 50%;
+
+    padding: 5px 15px;
+
+    margin-bottom: 15px;
+
+    border-radius: .5em;
+}
+
+@media screen and (max-width: 624px) {
+
+    .passenger-card label {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .passenger-card input[type=text] {
+        width: 100%;
+    }
+
+}
+
+
+.final-price {
+    text-align: center;
+}
+
+.final-price h3 {
+    font-size: 1.75em;
+}

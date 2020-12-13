@@ -1,0 +1,8 @@
+Главная (http://cycymmbu-m1.wsr.ru)
+Авторизация (http://cycymmbu-m1.wsr.ru/login.html)
+Регистрация (http://cycymmbu-m1.wsr.ru/register.html)
+Личный кабинет (http://cycymmbu-m1.wsr.ru/profile.html)
+Результаты поиска (http://cycymmbu-m1.wsr.ru/search.html)
+Бронирование билетов  (http://cycymmbu-m1.wsr.ru/booking.html)
+Управление бронированием (http://cycymmbu-m1.wsr.ru/booking_management.html)
+Выбор места (http://cycymmbu-m1.wsr.ru/seat.html)

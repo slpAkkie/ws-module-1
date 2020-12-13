@@ -1,78 +1,45 @@
-/**
- * Общий файл скриптов на весь сайт
- */
+$( document ).ready( function() {
+
+    $( window ).scroll( scrollfect );
+    $( window ).scroll( navChange );
+    $( window ).resize( scrollfect );
+    scrollfect()
+
+    $( '#js-burger' ).click( function() {
+        $( '.header-nav__menu' ).toggleClass( 'shown' );
+
+        $( 'body' ).toggleClass( 'scroll-fix' );
+    } );
 
 
+    function scrollfect() {
+        $( '.scrollfect' ).each( function() {
+            if (
+                window.pageYOffset + 70 < this.offsetTop + $( this ).height()
+                && window.pageYOffset + window.innerHeight > this.offsetTop
+            ) $( this ).attr( 'scrollfect-shown', true );
+            else if ( !$( this ).hasClass( 'scrollfect-once' ) ) $( this ).attr( 'scrollfect-shown', false );
+        } );
+    }
 
-$( document ).ready( function () {
+    $( '.seat-block' ).click( function() {
+        if ( !$( this ).hasClass( 'chosen' ) ) $( '.seat-block' ).each( function() {
+            $( this ).removeClass( 'chosen' );
+        } );
 
-  /**
-   * Выполним показ элементов,
-   * находящихся в видимых координатах браузера по Y
-   *
-   * Потом установим обработчики на прокрутку страницы
-   * и на изменение размера страницы
-   * чтобы показывать элементы, которые могли попасть в
-   * видимую часть экрана
-   */
-  scrollfect();
-  $( window ).resize( scrollfect );
-  $( document ).scroll( scrollfect );
+        $( this ).toggleClass( 'chosen' );
+    } );
 
-  /** По нажатию на кнопку-бургер переключить видимость меню */
-  $( '#js-burger' ).click( toggleNavMenu );
+    $( '.js-booking' ).click( () => {
+        location.href = '/booking.html';
+    } );
+
+
+    function navChange() {
+        if (window.pageYOffset > 70)
+            $( 'header.header nav.header-nav' ).removeClass( 'top' );
+        else
+            $( 'header.header nav.header-nav' ).addClass( 'top' );
+    }
 
 } );
-
-
-
-/**
- *
- * =========================
- * Независимые функции
- * =========================
- *
- */
-
-
-
-/**
- * Плавное появление карточек принципа накопления
- * =========================
- */
-function scrollfect() {
-  $( '.scrollfect' ).each( function () {
-    let headerHeight = $( 'nav.header__nav' ).height();
-
-    if (
-      ( window.scrollY + headerHeight <= this.offsetTop + this.clientHeight )
-      &&
-      ( window.scrollY + window.innerHeight >= this.offsetTop )
-      || $( this ).hasClass( 'scrollfect--on-load' )
-    ) $( this ).attr( 'scrollfect-visible', 'true' );
-    else if ( !$( this ).hasClass( 'scrollfect--once' ) ) $( this ).attr( 'scrollfect-visible', 'false' );
-  } );
-}
-
-
-
-/**
- *
- * =========================
- * Опсание функций-обработчиков
- * =========================
- *
- */
-
-
-
-/**
- * Переключение видимости навигационного меню
- * =========================
- */
-function toggleNavMenu() {
-  $( this ).toggleClass( 'active' );
-  $( '.nav__menu' ).toggleClass( 'show' );
-
-  $( 'body' ).toggleClass( 'scroll-fix' );
-}

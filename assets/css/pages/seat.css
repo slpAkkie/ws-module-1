@@ -1,4 +1,121 @@
-/*
-  Стили для страницы выбора мест
-  ====================
+/* 
+    Выбор места
 */
+.vertical-separater {
+    width: 2px;
+
+    background-color: var(--dark-color);
+
+    flex-shrink: 0;
+    margin: 0 30px;
+}
+
+.seats__inner {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.seats__map, .seats__block {
+    width: 49%
+}
+
+.seats__map {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.seats__map h4 {
+    font-size: 1.25em;
+}
+
+.seats__blocks {
+    width: 100%;
+}
+
+.seats-block__inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 250px;
+    margin: 0 auto;
+}
+
+.seat-block {
+    width: 40px;
+    height: 40px;
+
+    background-color: var(--neutral-color);
+
+    margin: 5px;
+    border-radius: .25em;
+
+    transition: all .25s ease;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.seat-block.chosen {
+    background-color: var(--accent-color);
+}
+
+.seat-block:hover {
+    cursor: pointer;
+}
+
+.seat-block:not(.chosen):hover {
+    background-color: var(--dark-color);
+}
+
+.seat-block:nth-child(2n) {
+    margin-right: 30px;
+}
+
+.seat__inner select {
+    display: block;
+    margin: 0 auto;
+    min-width: 300px;
+    padding: 5px 15px;
+    border-bottom: 1px solid var(--accent-color);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-size: 1em;
+}
+
+.seat__inner input[type=button] {
+    margin: 0 auto;
+    display: block;
+
+    margin-top: 60px;
+}
+
+@media screen and (max-width: 691px) {
+    
+    .seats__blocks {
+        width: 65%;
+    }
+
+}
+
+
+@media screen and (max-width: 559px) {
+
+    .seats__map, .vertical-separater {
+        display: none;
+    }
+    
+    .seats__blocks {
+        width: 100%;
+    }
+
+}

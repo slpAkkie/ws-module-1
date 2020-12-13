@@ -1,162 +1,131 @@
-<!--
-  Страница регистрации
-
-
-
-  - Author: Alexandr Shamanin <@slpAkkie>
--->
-
 <!DOCTYPE html>
 <html lang="ru">
-
-<!-- Head -->
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Мета теги
-  ========================= -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <link rel="stylesheet" href="./assets/css/pages/register.css">
 
-
-
-  <!-- CSS
-  ========================= -->
-  <link rel="stylesheet" href="./assets/css/main.css">
-  <link rel="stylesheet" href="./assets/css/pages/register.css">
-
-
-
-  <!-- Название страницы
-  ========================= -->
-  <title>Регистрация</title>
-
-</head> <!-- !head -->
-
-
-
-<!-- body -->
-
+    <title>Регистрация</title>
+</head>
 <body>
+    
+    <!-- Шапка
+    ==================== -->
+    <header class="header">
+        
+        <!-- Навигация
+        ==================== -->
+        <nav class="header-nav top">
+            <div class="container">
+                <div class="header-nav__inner">
 
-  <!-- App контейнер для VueJS
-  ========================= -->
-  <div id="app">
+                    <div class="hedaer-nav__burger" id="js-burger">
+                        <span></span>
+                    </div>
 
+                    <ul class="header-nav__menu">
+                        <li><a class="light dark" href="index.html#promotions">Акции</a></li>
+                        <li><a class="light dark" href="index.html#search">Поиск</a></li>
+                        <li><a class="light dark" href="booking_management.html">Регистрация на рейс</a></li>
+                        <li><a class="light dark" href="profile.html">Личный кабинет</a></li>
+                    </ul>
 
-
-    <!-- Шапка сайта
-
-      - Навигация              ->    Отсутствует
-      - Основная часть         ->    Отсутствует
-    ========================= -->
-    <header id="header">
-
-      <!-- Меню навигации
-
-        Ссылки:
-        - Акции                  ->    OK
-        - Поиск                  ->    OK
-        - Регистрация на рейс    ->    Вопрос: "Куда должна вести ссылка?"
-        - Личный кабинет         ->    OK
-      ========================= -->
-      <nav class="header__nav scrollfect scrollfect--slide-top scrollfect--once scrollfect--on-load">
-        <div class="container">
-          <div class="nav__inner">
-
-            <!-- Кнопка-бургер
-            ========================= -->
-            <div class="nav__burger" id="js-burger">
-              <span class="burger__line burger__line_middle"></span>
-            </div> <!-- !nav__burger -->
-
-            <!-- Меню навигации
-            ========================= -->
-            <div class="nav__menu">
-
-              <ul class="nav__section nav__items">
-                <li class="nav__item"><a class="decor-light" href="/#promotions">Акции</a></li>
-                <li class="nav__item"><a class="decor-light" href="/#search">Поиск</a></li>
-                <li class="nav__item"><a class="decor-light" href="#">Регистрация на рейс</a></li>
-                <li class="nav__item"><a class="decor-light" href="/profile.html">Личный кабинет</a></li>
-              </ul> <!-- !nav__items -->
-
-              <div class="nav__section nav__phone">
-                <a class="decor-light" href="tel:8-800-100-10-10">8 (800) 100-10-10</a>
-              </div> <!-- !nav__phone -->
-
-            </div> <!-- !nav__menu -->
-
-          </div>
-        </div>
-      </nav> <!-- !header__nav -->
-
-
-
-      <!-- Основная часть шапки
-
-        - Логотип                ->    OK
-        - Название компании      ->    OK
-        - Слоган                 ->    OK
-      ========================= -->
-      <div class="header__main">
-        <div class="container">
-          <div class="header-main__inner">
-
-            <div class="header__logo img-wrapper scrollfect scrollfect--fade scrollfect--once">
-              <a href="/"><img src="./assets/img/logo.png" alt=""></a>
-            </div> <!-- header__logo -->
-
-            <div class="header__face scrollfect scrollfect--fade scrollfect--once">
-              <h1>CitiesNearby</h1>
-              <p>С нами города стали еще ближе</p>
+                </div>
             </div>
+        </nav> <!-- !nav -->
 
-          </div>
-        </div>
-      </div> <!-- !header__main -->
+        <!-- Основная часть шапки
+        ==================== -->
+        <div class="header-main">
+            <div class="container">
+                <div class="header-main__inner">
+
+                    <div class="header-main__logo scrollfect scrollfect-fade scrollfect-once">
+                        <a href="index.html" class="no-decor"><img src="./assets/logo.png" alt="logo"></a>
+                    </div>
+
+                    <div class="heading scrollfect scrollfect-fade scrollfect-once">
+
+                        <h1>CitiesNearby</h1>
+                        <p>С нами города стали еще ближе</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- !header-main -->
 
     </header> <!-- !header -->
 
+    <!-- Регистрация
+    ==================== -->
+    <section class="register">
+        <div class="container">
+            <div class="register__inner">
 
+                <h2>Регистрация в личный кабинет</h2>
 
-    <!-- Основной контент сайта
+                <form action="javascript:void(0)">
+                    <label>Имя:</label>
+                    <input type="text" name="first_name" placeholder="Ваше имя">
+                    <label>Фамилия:</label>
+                    <input type="text" name="last_name" placeholder="Ваша фамилия">
+                    <label>Номер документа:</label>
+                    <input type="text" name="document_number" placeholder="Ваш номер документа">
+                    <label>Номер телефона:</label>
+                    <input type="tel" name="phone" placeholder="Ваш номер телефона">
+                    <label>Пароль:</label>
+                    <input type="password" name="password" placeholder="Придумайте пароль">
+                    <label>Повтор пароля:</label>
+                    <input type="password" name="repeat-password" placeholder="Повторите пароль">
 
-      - Описание принципов накопления ->    Отсутствует
-      - Доверие компании              ->    Отсутствует
-      - Акции                         ->    Отсутствует
-      - Подписка на закрытые акции    ->    Отсутствует
-    ========================= -->
-    <main id="router-view">
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
 
-      <!-- Контент страницы -->
-
-    </main> <!-- !router-view -->
-
-
+            </div>
+        </div>
+    </section> <!-- !register -->
 
     <!-- Подвал
+    ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
 
-      - Телефон                ->    Отсутствует
-      - Навигация по сайту     ->    Отсутствует
-    ========================= -->
-    <footer id="footer">
-      <div class="container">
+                <h3 class="scrollfect scrollfect-fade">Позвоните нам, если у вас остались вопросы</h3>
+                <p class="scrollfect scrollfect-fade"><a href="tel:8 (800) 100-10-10">8 (800) 100-10-10</a></p>
 
-      </div>
+                <br>
+                <br>
+                <h3 class="scrollfect scrollfect-fade">Не нашли что искали?</h3>
+
+                <ul class="footer-nav__menu">
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru">Главная</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/login.html">Авторизация</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/register.html">Регистрация</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/profile.html">Личный кабинет</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/search.html">Результаты поиска</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/booking.html">Бронирование билетов</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/booking_management.html">Управление бронированием</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/seat.html">Выбор места</a></li>
+                </ul>
+
+            </div>
+        </div>
     </footer> <!-- !footer -->
 
-  </div> <!-- !app -->
+    <!-- Copyright
+    ==================== -->
+    <div class="copyright">
+        <div class="copyright__inner">
+            Все права защищены &copy; 2020-2020
+        </div>
+    </div> <!-- !copyright -->
 
-
-
-  <!-- JS -->
-
-  <script src="./assets/js/jquery-3.5.1.js"></script>
-  <script src="./assets/js/main.js"></script>
-
-  <!-- !JS -->
-
-</body> <!-- !body -->
-
+    <script src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
 </html>

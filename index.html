@@ -1,388 +1,353 @@
-<!--
-  Главная страница сайта CitiesNearby - Landing Page
-
-
-
-  - Author: Alexandr Shamanin <@slpAkkie>
--->
-
 <!DOCTYPE html>
 <html lang="ru">
-
-<!-- Head -->
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Мета теги
-  ========================= -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <link rel="stylesheet" href="./assets/css/pages/index.css">
 
-
-
-  <!-- CSS
-  ========================= -->
-  <link rel="stylesheet" href="./assets/css/main.css">
-  <link rel="stylesheet" href="./assets/css/pages/index.css">
-
-
-
-  <!-- Название страницы
-  ========================= -->
-  <title>Главная страница</title>
-
-</head> <!-- !head -->
-
-
-
-<!-- body -->
-
+    <title>Главная страница</title>
+</head>
 <body>
+    
+    <!-- Шапка
+    ==================== -->
+    <header class="header">
+        
+        <!-- Навигация
+        ==================== -->
+        <nav class="header-nav top">
+            <div class="container">
+                <div class="header-nav__inner">
 
-  <!-- App контейнер для VueJS
-  ========================= -->
-  <div id="app">
+                    <div class="hedaer-nav__burger" id="js-burger">
+                        <span></span>
+                    </div>
 
+                    <ul class="header-nav__menu">
+                        <li><a class="light dark" href="index.html#promotions">Акции</a></li>
+                        <li><a class="light dark" href="index.html#search">Поиск</a></li>
+                        <li><a class="light dark" href="booking_management.html">Регистрация на рейс</a></li>
+                        <li><a class="light dark" href="profile.html">Личный кабинет</a></li>
+                    </ul>
 
-
-    <!-- Шапка сайта
-
-      - Навигация              ->    OK
-      - Основная часть         ->    OK
-    ========================= -->
-    <header id="header">
-
-      <!-- Меню навигации
-
-        Ссылки:
-        - Акции                  ->    OK
-        - Поиск                  ->    OK
-        - Регистрация на рейс    ->    Вопрос: "Куда должна вести ссылка?"
-        - Личный кабинет         ->    OK
-      ========================= -->
-      <nav class="header__nav scrollfect scrollfect--slide-top scrollfect--once scrollfect--on-load">
-        <div class="container">
-          <div class="nav__inner">
-
-            <!-- Кнопка-бургер
-            ========================= -->
-            <div class="nav__burger" id="js-burger">
-              <span class="burger__line burger__line_middle"></span>
-            </div> <!-- !nav__burger -->
-
-            <!-- Меню навигации
-            ========================= -->
-            <div class="nav__menu">
-
-              <ul class="nav__section nav__items">
-                <li class="nav__item"><a class="decor-light" href="/#promotions">Акции</a></li>
-                <li class="nav__item"><a class="decor-light" href="/#search">Поиск</a></li>
-                <li class="nav__item"><a class="decor-light" href="#">Регистрация на рейс</a></li>
-                <li class="nav__item"><a class="decor-light" href="/profile.html">Личный кабинет</a></li>
-              </ul> <!-- !nav__items -->
-
-              <div class="nav__section nav__phone">
-                <a class="decor-light" href="tel:8-800-100-10-10">8 (800) 100-10-10</a>
-              </div> <!-- !nav__phone -->
-
-            </div> <!-- !nav__menu -->
-
-          </div>
-        </div>
-      </nav> <!-- !header__nav -->
-
-
-
-      <!-- Основная часть шапки
-
-        - Логотип                ->    OK
-        - Название компании      ->    OK
-        - Слоган                 ->    OK
-      ========================= -->
-      <div class="header__main">
-        <div class="container">
-          <div class="header-main__inner">
-
-            <div class="header__logo img-wrapper scrollfect scrollfect--fade scrollfect--once">
-              <a href="/"><img src="./assets/img/logo.png" alt=""></a>
-            </div> <!-- header__logo -->
-
-            <div class="header__face scrollfect scrollfect--fade scrollfect--once">
-              <h1>CitiesNearby</h1>
-              <p>С нами города стали еще ближе</p>
+                </div>
             </div>
+        </nav> <!-- !nav -->
 
-          </div>
-        </div>
-      </div> <!-- !header__main -->
+        <!-- Основная часть шапки
+        ==================== -->
+        <div class="header-main">
+            <div class="container">
+                <div class="header-main__inner">
+
+                    <div class="header-main__logo scrollfect scrollfect-fade scrollfect-once">
+                        <a href="index.html" class="no-decor"><img src="./assets/logo.png" alt="logo"></a>
+                    </div>
+
+                    <div class="heading scrollfect scrollfect-fade scrollfect-once">
+
+                        <h1>CitiesNearby</h1>
+                        <p>С нами города стали еще ближе</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- !header-main -->
 
     </header> <!-- !header -->
 
-
-
-    <!-- Основной контент сайта
-
-      - Описание принципов накопления ->    OK
-      - Доверие компании              ->    Отсутствует
-      - Акции                         ->    Отсутствует
-      - Подписка на закрытые акции    ->    Отсутствует
-    ========================= -->
-    <main id="router-view">
-
-      <!-- Описание принципов накопления
-
-        Три анимированных принципа накопления
-        - Выбрать удобную дату перелета            ->    OK
-        - Накопить больше 50% бронирования на рейс ->    OK
-        - Получить снижение стоимости              ->    OK
-      ========================= -->
-      <section id="principles-description">
+    <!-- Принципы накопления
+    ==================== -->
+    <section class="acumulation">
         <div class="container">
+            <div class="acumulation__inner">
 
-          <div class="section-heading scrollfect scrollfect--fade">
-            <h2>Принцип накопления</h2>
-          </div>
+                <h2 class="scrollfect scrollfect-fade"><span>Принципы накопления</span></h2>
 
-          <div class="principles-description__inner">
+                <!-- Карточка принципа
+                ==================== -->
+                <div class="acumulation-card scrollfect scrollfect-fade">
+                    <div class="acumulation-card__inner">
 
-            <!-- Карточка принципа
-            ========================= -->
-            <div class="principle-card scrollfect scrollfect--fade">
-              <div class="principle-card__inner">
+                        <div class="icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        
+                        <p>
+                            Выбрать удобную дату перелета
+                        </p>
 
-                <div class="principle-card__icon">
-                  <i class="fas fa-calendar-alt"></i>
-                </div>
+                    </div>
+                </div> <!-- !acumulation-card -->
 
-                <div class="heading">
-                  <h6>Выбрать удобную дату перелета</h6>
-                </div>
+                <!-- Карточка принципа
+                ==================== -->
+                <div class="acumulation-card scrollfect scrollfect-fade">
+                    <div class="acumulation-card__inner">
 
-              </div>
-            </div> <!-- principle-card -->
+                        <div class="icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        
+                        <p>
+                            Накопить больше 50% бронирований на рейс
+                        </p>
 
-            <!-- Карточка принципа
-            ========================= -->
-            <div class="principle-card scrollfect scrollfect--fade">
-              <div class="principle-card__inner">
+                    </div>
+                </div> <!-- !acumulation-card -->
 
-                <div class="principle-card__icon">
-                  <i class="fas fa-percent"></i>
-                </div>
+                <!-- Карточка принципа
+                ==================== -->
+                <div class="acumulation-card scrollfect scrollfect-fade">
+                    <div class="acumulation-card__inner">
 
-                <div class="heading">
-                  <h6>Накопить больше 50% бронирования на рейс</h6>
-                </div>
+                        <div class="icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        
+                        <p>
+                            Получить снижение стоимости
+                        </p>
 
-              </div>
-            </div> <!-- principle-card -->
+                    </div>
+                </div> <!-- !acumulation-card -->
 
-            <!-- Карточка принципа
-            ========================= -->
-            <div class="principle-card scrollfect scrollfect--fade">
-              <div class="principle-card__inner">
-
-                <div class="principle-card__icon">
-                  <i class="fas fa-hand-holding-usd"></i>
-                </div>
-
-                <div class="heading">
-                  <h6>Получить снижение стоимости</h6>
-                </div>
-
-              </div>
-            </div> <!-- principle-card -->
-
-          </div>
+            </div>
         </div>
-      </section> <!-- !principles-description -->
+    </section> <!-- !acumulation -->
 
-
-
-      <!-- Доверие компании
-      ========================= -->
-      <section id="trust">
+    <!-- Доверие компании
+    ==================== -->
+    <section class="trust">
         <div class="container">
+            <div class="trust__inner">
 
-          <div class="section-heading scrollfect scrollfect--fade">
-            <h2>Нам доверяют</h2>
-          </div>
+                <h2 class="scrollfect scrollfect-fade">Нам доверяют</h2>
 
-          <div class="trust__inner">
+                <!-- Карточка доверия
+                ==================== -->
+                <div class="trust-card scrollfect scrollfect-fade">
+                    <div class="trust-card__inner">
+                        <h3>Алексей</h3>
+                        <p>Отлично! Быстро, дешево, комфортно.</p>
+                    </div>
+                </div> <!-- !trust-card -->
 
-            <!-- Карточка доверия
-            ========================= -->
-            <div class="trust-card scrollfect scrollfect--fade">
-              <div class="trust-card__inner">
+                <!-- Карточка доверия
+                ==================== -->
+                <div class="trust-card scrollfect scrollfect-fade">
+                    <div class="trust-card__inner">
+                        <h3>Инга</h3>
+                        <p>Очень понравилось, спасибо</p>
+                    </div>
+                </div> <!-- !trust-card -->
 
-                <div class="trust-card__avatar">
-                  <img src="./assets/img/profile.jpeg" alt="Avatar">
-                </div>
+                <!-- Карточка доверия
+                ==================== -->
+                <div class="trust-card scrollfect scrollfect-fade">
+                    <div class="trust-card__inner">
+                        <h3>Дмитрий</h3>
+                        <p>Самолеты комфортные, сотрудники отзывчивые</p>
+                    </div>
+                </div> <!-- !trust-card -->
 
-                <div class="trust-card__content">
-
-                  <div class="trust-card__name">
-                    <h4>Шимин Владислав</h4>
-                  </div>
-
-                  <div class="trust-card__text">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad non molestias accusamus mollitia
-                      nesciunt? Repellat!</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad non molestias accusamus mollitia
-                      nesciunt? Repellat!</p>
-                  </div>
-
-                </div>
-
-              </div>
-            </div> <!-- !trust-card -->
-
-            <!-- Карточка доверия
-            ========================= -->
-            <div class="trust-card scrollfect scrollfect--fade" scrollfect-by="parent">
-              <div class="trust-card__inner">
-
-                <div class="trust-card__avatar">
-                  <img src="./assets/img/profile.jpeg" alt="Avatar">
-                </div>
-
-                <div class="trust-card__content">
-
-                  <div class="trust-card__name">
-                    <h4>Хромой Олег</h4>
-                  </div>
-
-                  <div class="trust-card__text">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad non molestias accusamus mollitia
-                      nesciunt? Repellat!</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad non molestias accusamus mollitia
-                      nesciunt? Repellat!</p>
-                  </div>
-
-                </div>
-
-              </div>
-            </div> <!-- !trust-card -->
-
-            <!-- Карточка доверия
-            ========================= -->
-            <div class="trust-card scrollfect scrollfect--fade" scrollfect-by="parent">
-              <div class="trust-card__inner">
-
-                <div class="trust-card__avatar">
-                  <img src="./assets/img/profile.jpeg" alt="Avatar">
-                </div>
-
-                <div class="trust-card__content">
-
-                  <div class="trust-card__name">
-                    <h4>Сухарин Егор</h4>
-                  </div>
-
-                  <div class="trust-card__text">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad non molestias accusamus mollitia
-                      nesciunt? Repellat!</p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad non molestias accusamus mollitia
-                      nesciunt? Repellat!</p>
-                  </div>
-
-                </div>
-
-              </div>
-            </div> <!-- !trust-card -->
-
-          </div>
-
+            </div>
         </div>
-      </section> <!-- !trust -->
+    </section> <!-- !trust -->
 
+    <!-- Поиск
+    ==================== -->
+    <section class="search" id="search">
+        <div class="container scrollfect scrollfect-fade">
+            <div class="search__inner">
 
+                <h2>Мы подберем вам рейс</h2>
 
-      <!-- Поиск рейсов
+                <form action="javcascript:void(0)">
+                    <div class="inputs">
+                        <label>
+                            Откуда
 
-        Форма поиска рейсов:
-        - Откуда (Город или аэропорт)   ->    Отсутствует
-        - Куда (Город или аэропорт)     ->    Отсутствует
-        - Туда (дата вылета)            ->    Отсутствует
-        - Обратно (дата вылета)         ->    Отсутствует
-        - Количество пассажиров (1 - 8) ->    Отсутствует
-        - Кнопка поиска                 ->    Отсутствует
-      ========================= -->
-      <section id="search">
+                            <select name="from">
+                                <option value="SVO">Москва</option>
+                                <option value="KZN">Казань</option>
+                            </select>
+                        </label>
+                        <label for="">
+                            Куда
+                            
+                            <select name="to">
+                                <option value="SVO">Москва</option>
+                                <option value="KZN">Казань</option>
+                            </select>
+                        </label>
+                        
+                        <label>
+                            Туда
+
+                            <input type="date" name="date1" placeholder="">
+                        </label>
+                        <label>
+                            Обратно
+
+                            <input type="date" name="date2" placeholder="">
+                        </label>
+                        <label>
+                            Пассажиров
+
+                            <input type="number" name="passengers" placeholder="" min="1" max="8" value="1">
+                        </label>
+                    </div>
+                    
+                    <button type="submit">Посмотреть</button>
+                </form>
+
+            </div>
+        </div>
+    </section> <!-- !search -->
+
+    <!-- Поиск
+    ==================== -->
+    <section class="promotions" id="promotions">
         <div class="container">
+            <div class="promotions__inner">
 
-          <div class="section-heading scrollfect scrollfect--fade">
-            <h2>Найдите рейс для себя</h2>
-          </div>
+                <h2 class="scrollfect scrollfect-fade">Наши акции</h2>
 
+                <!-- Карточка доверия
+                ==================== -->
+                <div class="promotions-card scrollfect scrollfect-fade">
+                    <div class="promotions-card__inner">
+                        <div class="preview"><img src="./assets/images/promotions/promotion1.jpg" alt=""></div>
+                        <div class="descr">
+                            <h4>Возврат и изменение авиабилетов</h4>
+                            <article>
+                                <p>
+                                    Пандемия изменила планы многих путешественников, но мы знаем, что она не будет длиться вечно.
+                                    Как только все это закончится, мы продолжим исследовать этот мир так, как мы привыкли.
+                                    Специальные правила, разработанные для этой сложной ситуации, помогут вам отменить поездку
+                                    или отложить ее на более поздний срок.
+                                </p>
+                            </article>
+                            <a href="javascript:void(0)" class="button">Подробнее</a>
+                        </div>
+                    </div>
+                </div> <!-- !promotions-card -->
+
+                <!-- Карточка доверия
+                ==================== -->
+                <div class="promotions-card scrollfect scrollfect-fade">
+                    <div class="promotions-card__inner">
+                        <div class="preview"><img src="./assets/images/promotions/promotion2.jpg" alt=""></div>
+                        <div class="descr">
+                            <h4>Хорошее предложение</h4>
+                            <article>
+                                <p>
+                                    Снова увидеть улицы, которые так много видели. Обнять своих любимых и оглянуться назад, чтобы увидеть, через что вы прошли. И думать о новых мечтах, которые будут такими особенными!
+                                </p>
+                            </article>
+                            <a href="javascript:void(0)" class="button">Подробнее</a>
+                        </div>
+                    </div>
+                </div> <!-- !promotions-card -->
+
+                <!-- Карточка доверия
+                ==================== -->
+                <div class="promotions-card scrollfect scrollfect-fade">
+                    <div class="promotions-card__inner">
+                        <div class="preview"><img src="./assets/images/promotions/promotion3.jpg" alt=""></div>
+                        <div class="descr">
+                            <h4>Будем видеться почаще</h4>
+                            <article>
+                                <p>
+                                    С начала января мы расширяем географию полетов по России, чтобы вы могличаще видеться со своими близкими. Выбирайте нашу компанию, чтобы лететь туда, где вас всегда ждут.
+                                </p>
+                            </article>
+                            <a href="javascript:void(0)" class="button">Подробнее</a>
+                        </div>
+                    </div>
+                </div> <!-- !promotions-card -->
+
+                <!-- Карточка доверия
+                ==================== -->
+                <div class="promotions-card scrollfect scrollfect-fade">
+                    <div class="promotions-card__inner">
+                        <div class="preview"><img src="./assets/images/promotions/promotion4.jpg" alt=""></div>
+                        <div class="descr">
+                            <h4>Все снова идет своим чередом</h4>
+                            <article>
+                                <p>
+                                    С 10 августа мы возобновим полеты в Турцию. Рейсы из Москвы в Анталию будут выполняться ежедневно два разав день, а рейсы по маршруту Москва-Даламан-три-семь раз в неделю.
+                                </p>
+                            </article>
+                            <a href="javascript:void(0)" class="button">Подробнее</a>
+                        </div>
+                    </div>
+                </div> <!-- !promotions-card -->
+
+            </div>
         </div>
-      </section> <!-- !search -->
+    </section> <!-- !promotions -->
 
-
-
-      <!-- Акции
-        Карточки акций из медиафайлов
-
-        Карточка включает в себя:
-        - Изображение                ->    Отсутствует
-        - Название                   ->    Отсутствует
-        - Краткое описание           ->    Отсутствует
-        - Кнпока для просмотра акции ->    Отсутствует
-      ========================= -->
-      <section id="promotions">
+    <!-- Подписка
+    ==================== -->
+    <section class="subscription">
         <div class="container">
+            <div class="subscription__inner">
 
-          <div class="section-heading scrollfect scrollfect--fade">
-            <h2>Наши акции</h2>
-          </div>
+                <h2 class="scrollfect scrollfect-fade">Хотите получать эксклюзивные акции?</h2>
 
+                <form action="javascript:void(0)">
+                    <input class="scrollfect scrollfect-fade" type="email" name="email" placeholder="Ваш E-mail">
+
+                    <button type="submit" class="scrollfect scrollfect-fade">Подписаться</button>
+                </form>
+
+            </div>
         </div>
-      </section> <!-- !promotions -->
-
-
-
-      <!-- Подписка на закрытые акции
-
-        Форма подписки содержит:
-        - Поле E-mail            ->    Отсутствует
-        - Кнопка для подписки    ->    Отсутствует
-      ========================= -->
-      <section id="promotions-subscription">
-        <div class="container">
-
-          <div class="section-heading scrollfect scrollfect--fade">
-            <h2>Оформите подписку на закрытые акции</h2>
-          </div>
-
-        </div>
-      </section> <!-- !promotions-subscription -->
-
-    </main> <!-- !router-view -->
-
-
+    </section> <!-- !subscription -->
 
     <!-- Подвал
+    ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
 
-      - Телефон                ->    Отсутствует
-      - Навигация по сайту     ->    Отсутствует
-    ========================= -->
-    <footer id="footer">
-      <div class="container">
+                <h3 class="scrollfect scrollfect-fade">Позвоните нам, если у вас остались вопросы</h3>
+                <p class="scrollfect scrollfect-fade"><a href="tel:8 (800) 100-10-10">8 (800) 100-10-10</a></p>
 
-      </div>
+                <br>
+                <br>
+                <h3 class="scrollfect scrollfect-fade">Не нашли что искали?</h3>
+
+                <ul class="footer-nav__menu">
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru">Главная</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/login.html">Авторизация</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/register.html">Регистрация</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/profile.html">Личный кабинет</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/search.html">Результаты поиска</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/booking.html">Бронирование билетов</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/booking_management.html">Управление бронированием</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/seat.html">Выбор места</a></li>
+                </ul>
+
+            </div>
+        </div>
     </footer> <!-- !footer -->
 
-  </div> <!-- !app -->
+    <!-- Copyright
+    ==================== -->
+    <div class="copyright">
+        <div class="copyright__inner">
+            Все права защищены &copy; 2020-2020
+        </div>
+    </div> <!-- !copyright -->
 
-
-
-  <!-- JS -->
-
-  <script src="./assets/js/jquery-3.5.1.js"></script>
-  <script src="./assets/js/main.js"></script>
-
-  <!-- !JS -->
-
-</body> <!-- !body -->
-
+    <script src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
 </html>

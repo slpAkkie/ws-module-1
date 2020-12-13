@@ -1,4 +1,131 @@
-/*
-  Стили для страницы результатов поиска
-  ====================
+/* 
+    Результаты поиска
 */
+.flight-card {
+    box-shadow: var(--shadow);
+
+    border-radius: .5em;
+
+    padding: 30px;
+
+    margin-bottom: 30px;
+}
+
+.flight__heading {
+    display: flex;
+
+    align-items: center;
+}
+
+.flight__heading h4 {
+    margin: 0;
+}
+
+.flight__heading {
+    padding-bottom: 15px;
+}
+
+.flight__heading i {
+    margin: 0 15px;
+}
+
+.flight__heading i, .flight__heading .flight__aircraft-name {
+    color: var(--neutral-color);
+}
+
+.flight__data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.flight_data-el {
+    margin: 5px 0;
+    width: 48%;
+}
+
+.flight_data-el:nth-child(2n) {
+    margin-left: 4%;
+}
+
+.flight_data-el {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flight_data-el.cost,
+.flight_data-el.availability {
+    display: block;
+    
+    font-size: 1.5em;
+    color: var(--dark-color);
+
+    margin-top: 15px;
+}
+
+.flight_data-el.cost span,
+.flight_data-el.availability span {
+    margin-left: 15px;
+}
+
+.flight_data-el.cost i,
+.flight_data-el.availability i {
+    margin-left: 5px;
+}
+
+.flight__options {
+    margin-top: 15px;
+
+    text-align: right;
+}
+
+
+@media screen and (max-width: 624px) {
+
+    .flight__data {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flight_data-el {
+        width: 100%;
+    }
+
+    .flight_data-el:nth-child(2n) {
+        margin-left: 0;
+    }
+
+    .flight_data-el.cost,
+    .flight_data-el.availability {
+        text-align: center;
+    }
+
+    .flight__heading {
+        justify-content: center;
+    }
+    
+}
+
+@media screen and (max-width: 470px) {
+
+    .flight__options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flight__options .button {
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 342px) {
+
+    .flight__heading i,
+    .flight__heading span {
+        display: none;
+    }
+
+}

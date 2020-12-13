@@ -1,162 +1,201 @@
-<!--
-  Страница выбора мест
-
-
-
-  - Author: Alexandr Shamanin <@slpAkkie>
--->
-
 <!DOCTYPE html>
 <html lang="ru">
-
-<!-- Head -->
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Мета теги
-  ========================= -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/all.css">
+    <link rel="stylesheet" href="./assets/css/pages/seat.css">
 
-
-
-  <!-- CSS
-  ========================= -->
-  <link rel="stylesheet" href="./assets/css/main.css">
-  <link rel="stylesheet" href="./assets/css/pages/seat.css">
-
-
-
-  <!-- Название страницы
-  ========================= -->
-  <title>Выбор мест</title>
-
-</head> <!-- !head -->
-
-
-
-<!-- body -->
-
+    <title>Выбор места</title>
+</head>
 <body>
+    
+    <!-- Шапка
+    ==================== -->
+    <header class="header">
+        
+        <!-- Навигация
+        ==================== -->
+        <nav class="header-nav top">
+            <div class="container">
+                <div class="header-nav__inner">
 
-  <!-- App контейнер для VueJS
-  ========================= -->
-  <div id="app">
+                    <div class="hedaer-nav__burger" id="js-burger">
+                        <span></span>
+                    </div>
 
+                    <ul class="header-nav__menu">
+                        <li><a class="light dark" href="index.html#promotions">Акции</a></li>
+                        <li><a class="light dark" href="index.html#search">Поиск</a></li>
+                        <li><a class="light dark" href="booking_management.html">Регистрация на рейс</a></li>
+                        <li><a class="light dark" href="profile.html">Личный кабинет</a></li>
+                    </ul>
 
-
-    <!-- Шапка сайта
-
-      - Навигация              ->    Отсутствует
-      - Основная часть         ->    Отсутствует
-    ========================= -->
-    <header id="header">
-
-      <!-- Меню навигации
-
-        Ссылки:
-        - Акции                  ->    OK
-        - Поиск                  ->    OK
-        - Регистрация на рейс    ->    Вопрос: "Куда должна вести ссылка?"
-        - Личный кабинет         ->    OK
-      ========================= -->
-      <nav class="header__nav scrollfect scrollfect--slide-top scrollfect--once scrollfect--on-load">
-        <div class="container">
-          <div class="nav__inner">
-
-            <!-- Кнопка-бургер
-            ========================= -->
-            <div class="nav__burger" id="js-burger">
-              <span class="burger__line burger__line_middle"></span>
-            </div> <!-- !nav__burger -->
-
-            <!-- Меню навигации
-            ========================= -->
-            <div class="nav__menu">
-
-              <ul class="nav__section nav__items">
-                <li class="nav__item"><a class="decor-light" href="/#promotions">Акции</a></li>
-                <li class="nav__item"><a class="decor-light" href="/#search">Поиск</a></li>
-                <li class="nav__item"><a class="decor-light" href="#">Регистрация на рейс</a></li>
-                <li class="nav__item"><a class="decor-light" href="/profile.html">Личный кабинет</a></li>
-              </ul> <!-- !nav__items -->
-
-              <div class="nav__section nav__phone">
-                <a class="decor-light" href="tel:8-800-100-10-10">8 (800) 100-10-10</a>
-              </div> <!-- !nav__phone -->
-
-            </div> <!-- !nav__menu -->
-
-          </div>
-        </div>
-      </nav> <!-- !header__nav -->
-
-
-
-      <!-- Основная часть шапки
-
-        - Логотип                ->    OK
-        - Название компании      ->    OK
-        - Слоган                 ->    OK
-      ========================= -->
-      <div class="header__main">
-        <div class="container">
-          <div class="header-main__inner">
-
-            <div class="header__logo img-wrapper scrollfect scrollfect--fade scrollfect--once">
-              <a href="/"><img src="./assets/img/logo.png" alt=""></a>
-            </div> <!-- header__logo -->
-
-            <div class="header__face scrollfect scrollfect--fade scrollfect--once">
-              <h1>CitiesNearby</h1>
-              <p>С нами города стали еще ближе</p>
+                </div>
             </div>
+        </nav> <!-- !nav -->
 
-          </div>
-        </div>
-      </div> <!-- !header__main -->
+        <!-- Основная часть шапки
+        ==================== -->
+        <div class="header-main">
+            <div class="container">
+                <div class="header-main__inner">
+
+                    <div class="header-main__logo scrollfect scrollfect-fade scrollfect-once">
+                        <a href="index.html" class="no-decor"><img src="./assets/logo.png" alt="logo"></a>
+                    </div>
+
+                    <div class="heading scrollfect scrollfect-fade scrollfect-once">
+
+                        <h1>CitiesNearby</h1>
+                        <p>С нами города стали еще ближе</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div> <!-- !header-main -->
 
     </header> <!-- !header -->
 
+    <!-- Выбор места
+    ==================== -->
+    <section class="seat">
+        <div class="container">
+            <div class="seat__inner">
 
+                <h2 class="scrollfect scrollfect-fade scrollfect-once">Выберите пассажира и его место</h2>
 
-    <!-- Основной контент сайта
+                <select name="passenger">
+                    <option value="Владимир">Владимир</option>
+                    <option value="Алексей">Алексей</option>
+                    <option value="Адександр">Адександр</option>
+                </select>
 
-      - Описание принципов накопления ->    Отсутствует
-      - Доверие компании              ->    Отсутствует
-      - Акции                         ->    Отсутствует
-      - Подписка на закрытые акции    ->    Отсутствует
-    ========================= -->
-    <main id="router-view">
+                <!-- Места
+                ==================== -->
+                <div class="seats scrollfect scrollfect-fade scrollfect-once">
+                    <div class="seats__inner">
 
-      <!-- Контент страницы -->
+                        <div class="seats__map">
+                            <h4 class="seats_name">Кабина самолета</h4>
+                            <h4 class="seats_name">Крылья</h4>
+                            <h4 class="seats_name">Хвост</h4>
+                        </div>
+                        <div class="vertical-separater"></div>
+                        <div class="seats__blocks">
+                            <div class="seats-block__inner">
+                                <div class="seat-block">1A</div>
+                                <div class="seat-block">1B</div>
+                                <div class="seat-block">1C</div>
+                                <div class="seat-block">1D</div>
+                                <div class="seat-block">2A</div>
+                                <div class="seat-block">2B</div>
+                                <div class="seat-block">2C</div>
+                                <div class="seat-block">2D</div>
+                                <div class="seat-block">3A</div>
+                                <div class="seat-block">3B</div>
+                                <div class="seat-block">3C</div>
+                                <div class="seat-block">3D</div>
+                                <div class="seat-block">4A</div>
+                                <div class="seat-block">4B</div>
+                                <div class="seat-block">4C</div>
+                                <div class="seat-block">4D</div>
+                                <div class="seat-block">5A</div>
+                                <div class="seat-block">5B</div>
+                                <div class="seat-block">5C</div>
+                                <div class="seat-block">5D</div>
+                                <div class="seat-block">6A</div>
+                                <div class="seat-block">6B</div>
+                                <div class="seat-block">6C</div>
+                                <div class="seat-block">6D</div>
+                                <div class="seat-block">7A</div>
+                                <div class="seat-block">7B</div>
+                                <div class="seat-block">7C</div>
+                                <div class="seat-block">7D</div>
+                                <div class="seat-block">8A</div>
+                                <div class="seat-block">8B</div>
+                                <div class="seat-block">8C</div>
+                                <div class="seat-block">8D</div>
+                                <div class="seat-block">9A</div>
+                                <div class="seat-block">9B</div>
+                                <div class="seat-block">9C</div>
+                                <div class="seat-block">9D</div>
+                                <div class="seat-block">10A</div>
+                                <div class="seat-block">10B</div>
+                                <div class="seat-block">10C</div>
+                                <div class="seat-block">10D</div>
+                                <div class="seat-block">11A</div>
+                                <div class="seat-block">11B</div>
+                                <div class="seat-block">11C</div>
+                                <div class="seat-block">11D</div>
+                                <div class="seat-block">12A</div>
+                                <div class="seat-block">12B</div>
+                                <div class="seat-block">12C</div>
+                                <div class="seat-block">12D</div>
+                                <div class="seat-block">13A</div>
+                                <div class="seat-block">13B</div>
+                                <div class="seat-block">13C</div>
+                                <div class="seat-block">13D</div>
+                                <div class="seat-block">14A</div>
+                                <div class="seat-block">14B</div>
+                                <div class="seat-block">14C</div>
+                                <div class="seat-block">14D</div>
+                                <div class="seat-block">15A</div>
+                                <div class="seat-block">15B</div>
+                                <div class="seat-block">15C</div>
+                                <div class="seat-block">15D</div>
+                            </div>
+                        </div>
 
-    </main> <!-- !router-view -->
+                    </div>
+                </div> <!-- !seats -->
 
+                <input class="seats scrollfect scrollfect-fade scrollfect-once" type="button" value="Занять это место">
 
+            </div>
+        </div>
+    </section> <!-- !seat -->
 
     <!-- Подвал
+    ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
 
-      - Телефон                ->    Отсутствует
-      - Навигация по сайту     ->    Отсутствует
-    ========================= -->
-    <footer id="footer">
-      <div class="container">
+                <h3 class="scrollfect scrollfect-fade">Позвоните нам, если у вас остались вопросы</h3>
+                <p class="scrollfect scrollfect-fade"><a href="tel:8 (800) 100-10-10">8 (800) 100-10-10</a></p>
 
-      </div>
+                <br>
+                <br>
+                <h3 class="scrollfect scrollfect-fade">Не нашли что искали?</h3>
+
+                <ul class="footer-nav__menu">
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru">Главная</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/login.html">Авторизация</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/register.html">Регистрация</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/profile.html">Личный кабинет</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/search.html">Результаты поиска</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/booking.html">Бронирование билетов</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/booking_management.html">Управление бронированием</a></li>
+                    <li class="scrollfect scrollfect-fade"><a href="http://cycymmbu-m1.wsr.ru/seat.html">Выбор места</a></li>
+                </ul>
+
+            </div>
+        </div>
     </footer> <!-- !footer -->
 
-  </div> <!-- !app -->
+    <!-- Copyright
+    ==================== -->
+    <div class="copyright">
+        <div class="copyright__inner">
+            Все права защищены &copy; 2020-2020
+        </div>
+    </div> <!-- !copyright -->
 
-
-
-  <!-- JS -->
-
-  <script src="./assets/js/jquery-3.5.1.js"></script>
-  <script src="./assets/js/main.js"></script>
-
-  <!-- !JS -->
-
-</body> <!-- !body -->
-
+    <script src="./assets/js/jquery-3.5.1.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
 </html>
