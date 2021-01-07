@@ -6,22 +6,27 @@
 
 $( document ).ready( function () {
 
-  /**
-   * Выполним показ элементов,
-   * находящихся в видимых координатах браузера по Y
-   *
-   * Потом установим обработчики на прокрутку страницы
-   * и на изменение размера страницы
-   * чтобы показывать элементы, которые могли попасть в
-   * видимую часть экрана
-   */
-  scrollfect();
-  $( window ).resize( scrollfect );
-  $( document ).scroll( scrollfect );
-
   /** По нажатию на кнопку-бургер переключить видимость меню */
   $( '#js-burger' ).click( toggleNavMenu );
 
+} );
+
+/** Установим настройки */
+ScrollFect.appearance( '.scrollfect', {
+  animation: ScrollFect.animationStore.appearanceFade,
+  duration: 0.75,
+  params: {
+    minScale: 0.85
+  }
+} );
+
+ScrollFect.appearance( 'nav.header__nav', {
+  animation: ScrollFect.animationStore.appearanceSlideTop,
+  duration: 0.75,
+  onVisible: false,
+  params: {
+    offsetTop: 25
+  }
 } );
 
 
@@ -33,26 +38,6 @@ $( document ).ready( function () {
  * =========================
  *
  */
-
-
-
-/**
- * Плавное появление карточек принципа накопления
- * =========================
- */
-function scrollfect() {
-  $( '.scrollfect' ).each( function () {
-    let headerHeight = $( 'nav.header__nav' ).height();
-
-    if (
-      ( window.scrollY + headerHeight <= this.offsetTop + this.clientHeight )
-      &&
-      ( window.scrollY + window.innerHeight >= this.offsetTop )
-      || $( this ).hasClass( 'scrollfect--on-load' )
-    ) $( this ).attr( 'scrollfect-visible', 'true' );
-    else if ( !$( this ).hasClass( 'scrollfect--once' ) ) $( this ).attr( 'scrollfect-visible', 'false' );
-  } );
-}
 
 
 

@@ -229,37 +229,3 @@ section {
   right: 0;
   bottom: -5px;
 }
-
-
-
-
-/*
-   - Стили для плавного появления элементов при скролле
-*/
-.scrollfect {
-  transition: all .75s ease;
-}
-
-.scrollfect.scrollfect--fade {
-  opacity: 0;
-
-  transform: scale(.5);
-}
-
-.scrollfect.scrollfect--fade[scrollfect-visible=true] {
-  opacity: 1;
-
-  transform: scale(1);
-}
-
-.scrollfect.scrollfect--slide-top {
-  opacity: 0;
-
-  transform: translateY(-75px);
-}
-
-.scrollfect.scrollfect--slide-top[scrollfect-visible=true] {
-  opacity: 1;
-
-  transform: translateY(0);
-}
