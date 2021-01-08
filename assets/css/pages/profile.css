@@ -1,4 +1,4 @@
-/* 
+/*
     Личный кабинет
 */
 .user-info__row {
@@ -12,6 +12,12 @@
     margin-bottom: 10px;
 }
 
+.user-info__controls {
+    margin-top: 15px;
+
+    text-align: right;
+}
+
 @media screen and (max-width: 573px) {
     .user-info__row h3 {
         font-size: 1.25em;
@@ -19,7 +25,7 @@
 }
 
 
-/* 
+/*
     Бронирования
 */
 .booking-card {
@@ -78,7 +84,7 @@
 .booking_data-el.cost,
 .booking_data-el.availability {
     display: block;
-    
+
     font-size: 1.5em;
     color: var(--dark-color);
 
@@ -130,7 +136,7 @@
     .booking__heading {
         justify-content: center;
     }
-    
+
 }
 
 @media screen and (max-width: 470px) {
