@@ -1,4 +1,4 @@
-/* 
+/*
     Шрифты
 */
 @font-face {
@@ -12,7 +12,7 @@
 }
 
 
-/* 
+/*
     Сброс стилей
 */
 
@@ -85,7 +85,7 @@ a.dark::after {
 
 
 
-/* 
+/*
     Общие стили
 */
 :root {
@@ -182,7 +182,7 @@ a.button:hover::after {
 
 
 
-/* 
+/*
     Шапка
 */
 header.header {
@@ -341,7 +341,7 @@ nav.header-nav .header-nav__menu li:not(:last-child) {
 }
 
 @media screen and (max-width: 379px) {
-    
+
     .heading h1 {
         font-size: 2.25em;
     }
@@ -384,7 +384,7 @@ header.header .header-main__logo img {
 
 
 
-/* 
+/*
     Подвал
 */
 footer.footer {
@@ -399,7 +399,7 @@ footer.footer .footer-nav__menu li {
 
 
 
-/* 
+/*
     Copyright
 */
 .copyright {
@@ -409,23 +409,4 @@ footer.footer .footer-nav__menu li {
 
     background-color: var(--dark-color);
     color: white;
-}
-
-
-
-/* 
-    scrollfect
-*/
-.scrollfect {
-    transition: all 0.75s ease;
-}
-
-.scrollfect-fade {
-    opacity: 0;
-    transform: scale(0.2);
-}
-
-.scrollfect-fade[scrollfect-shown=true] {
-    opacity: 1;
-    transform: scale(1);
 }
