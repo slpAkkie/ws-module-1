@@ -12,6 +12,7 @@ ScrollFect.appearance( '.scrollfect-once', {
     duration: 0.75,
     gap: { top: 120, bottom: 80 },
     once: true,
+    onVisible: false,
     params: {
         minScale: 0.85
     }
