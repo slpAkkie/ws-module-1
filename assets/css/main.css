@@ -305,7 +305,7 @@ nav.header-nav:not(.top) .hedaer-nav__burger span {
 }
 
 
-@media screen and (max-width: 573px) {
+@media screen and (max-width: 590px) {
 
     .hedaer-nav__burger {
         display: block;
