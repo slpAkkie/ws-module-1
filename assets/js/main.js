@@ -3,7 +3,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
     ScrollFect.appearance( '.scrollfect', {
         animation: ScrollFect.animationStore.appearanceFade,
         duration: 0.75,
-        gap: 100,
+        gap: { top: 120, bottom: 80 },
         params: {
             minScale: 0.85
         }

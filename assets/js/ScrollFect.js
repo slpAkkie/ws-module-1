@@ -4,8 +4,8 @@
  * Скрипты предоставлены для работы ScrollFectJS
  *
  * Author: Alexandr Shamanin (@slpAkkie)
- * Version: 1.0.4
- * File Version: 1.2.6
+ * Version: 1.0.9
+ * File Version: 1.2.11
 */
 
 
@@ -32,15 +32,18 @@ class ScrollFect {
      * @param {array} elems Массив HTMLElement'ов
      * @param {object} options Параметры
      */
-    appearanceFade: ( elems, options ) => {
+    appearanceFade: function ( elems, options ) {
       let params = options.params;
-      ( !params.minScale || ( typeof params.minScale !== 'number' ) ) && ( params.minScale = 0.5 );
+      ( !params.minScale || ( typeof params.minScale !== 'number' ) ) && ( params.minScale = 0.85 );
 
       for ( let i = 0; i < elems.length; i++ ) {
         elems[ i ].style.transition = '';
 
         elems[ i ].style.opacity = '0';
         elems[ i ].style.transform = `scale(${params.minScale})`;
+
+        /** HACK: Строчка нужна, чтобы стили, заданные выше применились до того, как я их снова изменю */
+        elems[ i ].offsetWidth;
 
         elems[ i ].style.transitionProperty = 'opacity, transform';
         elems[ i ].style.transitionDuration = `${options.duration}s`;
@@ -69,16 +72,19 @@ class ScrollFect {
      * @param {array} elems Массив HTMLElement'ов
      * @param {object} options Параметры
      */
-    appearanceSlideTop: ( elems, options ) => {
+    appearanceSlideTop: function ( elems, options ) {
       let params = options.params;
-      ( !params.topOffset || ( typeof params.topOffset !== 'number' ) ) && ( params.topOffset = -50 );
-      params.topOffset = -Math.abs( params.topOffset );
+      ( !params.offset || ( typeof params.offset !== 'number' ) ) && ( params.offset = -25 );
+      params.offset = -Math.abs( params.offset );
 
       for ( let i = 0; i < elems.length; i++ ) {
         elems[ i ].style.transition = '';
 
         elems[ i ].style.opacity = '0';
-        elems[ i ].style.transform = `translateY(${params.topOffset}px)`;
+        elems[ i ].style.transform = `translateY(${params.offset}px)`;
+
+        /** HACK: Строчка нужна, чтобы стили, заданные выше применились до того, как я их снова изменю */
+        elems[ i ].offsetWidth;
 
         elems[ i ].style.transitionProperty = 'opacity, transform';
         elems[ i ].style.transitionDuration = `${options.duration}s`;
@@ -97,6 +103,129 @@ class ScrollFect {
         } else {
           this.style.opacity = '0';
           this.style.transform = `translateY(${params.topOffset}px)`;
+        }
+      }
+    },
+
+    /**
+     * Конструкт анимации появления снизу
+     *
+     * @param {array} elems Массив HTMLElement'ов
+     * @param {object} options Параметры
+     */
+    appearanceSlideBottom: function ( elems, options ) {
+      let params = options.params;
+      ( !params.offset || ( typeof params.offset !== 'number' ) ) && ( params.offset = 25 );
+      params.offset = Math.abs( params.offset );
+
+      for ( let i = 0; i < elems.length; i++ ) {
+        elems[ i ].style.transition = '';
+
+        elems[ i ].style.opacity = '0';
+        elems[ i ].style.transform = `translateY(${params.offset}px)`;
+
+        /** HACK: Строчка нужна, чтобы стили, заданные выше применились до того, как я их снова изменю */
+        elems[ i ].offsetWidth;
+
+        elems[ i ].style.transitionProperty = 'opacity, transform';
+        elems[ i ].style.transitionDuration = `${options.duration}s`;
+        elems[ i ].style.transitionTimingFunction = 'ease';
+      }
+
+      /**
+       * Функция изменения состояния блока
+       *
+       * @param {boolean} visible Виден ли сейчас блок
+       */
+      return function ( visible ) {
+        if ( visible ) {
+          this.style.opacity = '1';
+          this.style.transform = 'translateY(0px)';
+        } else {
+          this.style.opacity = '0';
+          this.style.transform = `translateY(${params.topOffset}px)`;
+        }
+      }
+    },
+
+    /**
+     * Конструкт анимации появления слева
+     *
+     * @param {array} elems Массив HTMLElement'ов
+     * @param {object} options Параметры
+     */
+    appearanceSlideLeft: function ( elems, options ) {
+      let params = options.params;
+      ( !params.offset || ( typeof params.offset !== 'number' ) ) && ( params.offset = -25 );
+      params.offset = -Math.abs( params.offset );
+
+      for ( let i = 0; i < elems.length; i++ ) {
+        elems[ i ].style.transition = '';
+
+        elems[ i ].style.opacity = '0';
+        elems[ i ].style.transform = `translateX(${params.offset}px)`;
+
+        /** HACK: Строчка нужна, чтобы стили, заданные выше применились до того, как я их снова изменю */
+        elems[ i ].offsetWidth;
+
+        elems[ i ].style.transitionProperty = 'opacity, transform';
+        elems[ i ].style.transitionDuration = `${options.duration}s`;
+        elems[ i ].style.transitionTimingFunction = 'ease';
+      }
+
+      /**
+       * Функция изменения состояния блока
+       *
+       * @param {boolean} visible Виден ли сейчас блок
+       */
+      return function ( visible ) {
+        if ( visible ) {
+          this.style.opacity = '1';
+          this.style.transform = 'translateX(0px)';
+        } else {
+          this.style.opacity = '0';
+          this.style.transform = `translateX(${params.offset}px)`;
+        }
+      }
+    },
+
+    /**
+     * Конструкт анимации появления справа
+     *
+     * @param {array} elems Массив HTMLElement'ов
+     * @param {object} options Параметры
+     */
+    appearanceSlideRight: function ( elems, options ) {
+      let params = options.params;
+      ( !params.offset || ( typeof params.offset !== 'number' ) ) && ( params.offset = 25 );
+      params.offset = Math.abs( params.offset );
+
+      for ( let i = 0; i < elems.length; i++ ) {
+        elems[ i ].style.transition = '';
+
+        elems[ i ].style.opacity = '0';
+        elems[ i ].style.transform = `translateX(${params.offset}px)`;
+
+        /** HACK: Строчка нужна, чтобы стили, заданные выше применились до того, как я их снова изменю */
+        elems[ i ].offsetWidth;
+
+        elems[ i ].style.transitionProperty = 'opacity, transform';
+        elems[ i ].style.transitionDuration = `${options.duration}s`;
+        elems[ i ].style.transitionTimingFunction = 'ease';
+      }
+
+      /**
+       * Функция изменения состояния блока
+       *
+       * @param {boolean} visible Виден ли сейчас блок
+       */
+      return function ( visible ) {
+        if ( visible ) {
+          this.style.opacity = '1';
+          this.style.transform = 'translateX(0px)';
+        } else {
+          this.style.opacity = '0';
+          this.style.transform = `translateX(${params.offset}px)`;
         }
       }
     },
@@ -120,6 +249,7 @@ class ScrollFect {
     if ( !window.ScrollFectAppearanceHandler ) {
       window.ScrollFectAppearanceHandler = true;
       window.addEventListener( 'scroll', ScrollFect.appearanceHandler );
+      window.addEventListener( 'resize', ScrollFect.appearanceHandler );
     }
 
     setTimeout( ScrollFect.appearanceHandler, 0 );
@@ -134,9 +264,11 @@ class ScrollFect {
    */
   static appearanceHandler() {
     ScrollFect.animatedStore.forEach( ( options, el ) => {
+      let lastStatus = el.scrollfectShown === true;
       let inVisibleZone = ( options.onVisible === false ) || ScrollFect.inVisibleZone( el, options.gap );
+      if ( lastStatus === inVisibleZone ) return;
 
-      options.animation.bind( el )( inVisibleZone );
+      options.animation.call( el, inVisibleZone );
 
       if ( options.once ) ScrollFect.animatedStore.delete( el );
     } );
@@ -246,10 +378,12 @@ class ScrollFect {
       }
     }
 
-    else if ( typeof elements !== 'HTMLElement' ) {
+    else if ( !( elements instanceof Element ) ) {
       console.error( `Первый аргумент передан неверно. Ожидалась строка или массив передано '${typeof elements}'` );
       return false;
     }
+
+    if ( depth === 1 && elements instanceof Element ) return [ elements ];
 
     return elements;
   }
