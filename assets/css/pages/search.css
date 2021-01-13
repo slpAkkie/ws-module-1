@@ -1,4 +1,4 @@
-/* 
+/*
     Результаты поиска
 */
 .flight-card {
@@ -57,7 +57,7 @@
 .flight_data-el.cost,
 .flight_data-el.availability {
     display: block;
-    
+
     font-size: 1.5em;
     color: var(--dark-color);
 
@@ -78,6 +78,19 @@
     margin-top: 15px;
 
     text-align: right;
+}
+
+
+.button.js-remove {
+    border-color: #e24d4d;
+    color: #e24d4d;
+
+    margin-left: 25px;
+}
+
+.button.js-remove:hover {
+    color: white !important;
+    background: #e24d4d;
 }
 
 
@@ -104,10 +117,10 @@
     .flight__heading {
         justify-content: center;
     }
-    
+
 }
 
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 590px) {
 
     .flight__options {
         display: flex;
